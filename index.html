@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
+  <!-- <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css"> -->
+  <!-- Theme: Simple -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <style type="text/css">
+  .sidebar-nav>ul>li>ul>li>ul>li>a:before {
+    content: '';
+  }
+  .markdown-section .header th {
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+  }
+  .sidebar-nav>ul>li>ul>li>ul>li.active>a:before  {
+    content: '';
+  }
+  :root {
+    --sidebar-width: 20rem;
+  }
+  </style>
+  <!-- <script src="//unpkg.com/docsify-edit-on-github@1.0.1/index.js"></script> -->
+  <!-- <script src="//unpkg.com/docsify-copy-code"></script> -->
+
+  <!-- <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css"> -->
+
+<!-- <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script> -->
+  <!-- Theme: Simple -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+</head>
+<body>
+  
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'BITBOX API Guide',
+      repo: 'https://git.linecorp.com/jeongeun-jeon/Bitbox-api-doc',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      loadNavbar: true,
+      maxLevel: 4,
+      auto2top: true,
+      autoHeader: false,
+      relativePath: true,
+      ext: '.md',
+      // basePath: '/en/',
+      themeColor: '#1b73dd',
+      // coverpage: true,
+      // onlyCover: false,
+      // coverpage: 'README.md',
+      search: {
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: 'auto',
+        placeholder: 'Type to search',
+
+        // Localization
+        placeholder: {
+          '/': 'Type to search'
+        },
+
+        noData: 'No Results!',
+
+        // Localization
+        noData: {
+          '/': 'No Results'
+        },
+
+        // Headline depth, 1 - 6
+        depth: 2
+
+      },
+      themeable: {
+          readyTransition : true, // default
+          responsiveTables: true  // default
+      },
+
+      logo: 'images/bitbox_vertical.png'
+    }
+
+  </script>
+  <script>
+  // const gitalk = new Gitalk({
+  //   clientID: 'Github Application Client ID',
+  //   clientSecret: 'Github Application Client Secret',
+  //   repo: 'Github repo',
+  //   owner: 'Github repo owner',
+  //   admin: ['Github repo collaborators, only these guys can initialize github issues'],
+  //   // facebook-like distraction free mode
+  //   distractionFreeMode: false
+  // })
+</script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <!-- <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script> -->
+
+
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-http.min.js"></script>
+  <!-- docsify-themeable (latest v0.x.x) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
+</body>
+</html>
