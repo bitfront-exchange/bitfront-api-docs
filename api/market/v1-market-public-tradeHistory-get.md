@@ -79,7 +79,7 @@ See the parameter descriptions.<br/>
 
 <td>
 
-A case-sensitive string literal for the [Currency](#currency) and the [Market](#market) separated by '.'.<br/>
+A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by '.'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH.
 
 </td>
@@ -211,7 +211,7 @@ The maximum number of trades to retrieve. It should be in the range of 1-100. Th
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `coinPair` |  A case-sensitive string literal for the [Currency](#currency) and the [Market](#market) separated by \'.\'.<br/>
+|---|---|---|---|---|| `coinPair` |  A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by \'.\'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH. | <span class="nowrap">String</span> | query |     || `startTime` |  The earliest time of trades to retrieve. It is in milliseconds in UTC. | <span class="nowrap">Integer</span> | query |     || `endTime` |  The latest time of trades to retrieve. It is a timestamp in milliseconds since Unix Epoch in UTC. | <span class="nowrap">Integer</span> | query |     || `max` |  The maximum number of trades to retrieve. It should be in the range of 1-100. The default is 100. Note that the returned records can be less than `max` because it only provides data over the last 3 months. | <span class="nowrap">Integer</span> | query |     | -->
 
 ## Response
@@ -319,7 +319,7 @@ O
 
 <td>
 
-The result status code. See [StatusCode definitions](#statuscode-definitions).
+The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -347,7 +347,7 @@ O
 
 <td>
 
-The detailed message of the result
+The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -494,7 +494,7 @@ Long
 
 <td>
 
-A [coin code](#coin-code) of the [Market](#market)
+A [coin code](../../5_Terms.md#coin-code) of the [Market](../../5_Terms.md#market-for-coin-trading)
 
 </td>
 
@@ -522,7 +522,7 @@ String
 
 <td>
 
-A [coin code](#coin-code) of the [Currency](#currency)
+A [coin code](../../5_Terms.md#coin-code)\] of the [Currency](../../5_Terms.md#currency-for-coin-trading)
 
 </td>
 

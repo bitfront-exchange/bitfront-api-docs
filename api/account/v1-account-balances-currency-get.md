@@ -74,8 +74,8 @@ Gets your account currency balance for the given currency.
 
 <td>
 
-A [coin code](#coin-code) of the [Currency](#currency).<br/>
-For example, BCH for Bitcoin Cash. (See [Trading pair policy](#trading-pair-policy).)
+A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading).<br/>
+For example, BCH for Bitcoin Cash.
 
 </td>
 
@@ -104,8 +104,8 @@ O
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `currency` |  A [coin code](#coin-code) of the [Currency](#currency).<br/>
-For example, BCH for Bitcoin Cash. (See [Trading pair policy](#trading-pair-policy).) | <span class="nowrap">String</span> | path |  O  | -->
+|---|---|---|---|---|| `currency` |  A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading).<br/>
+For example, BCH for Bitcoin Cash. | <span class="nowrap">String</span> | path |  O  | -->
 
 ## Response
 
@@ -212,7 +212,7 @@ O
 
 <td>
 
-The result status code. See [StatusCode definitions](#statuscode-definitions).
+The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -240,7 +240,7 @@ O
 
 <td>
 
-The detailed message of the result
+The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -351,7 +351,7 @@ See the reference object.
 
 <td>
 
-A [coin code](#coin-code) of the [Currency](#currency)
+A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading)
 
 </td>
 

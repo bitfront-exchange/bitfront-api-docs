@@ -115,7 +115,7 @@ O
 
 <td>
 
-The result status code. See [StatusCode definitions](#statuscode-definitions).
+The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -143,7 +143,7 @@ O
 
 <td>
 
-The detailed message of the result
+The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -261,7 +261,7 @@ Array of [balance](#balance)
 
 <td>
 
-A [coin code](#coin-code) of the [Currency](#currency)
+A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading)
 
 </td>
 

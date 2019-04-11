@@ -228,7 +228,7 @@ O
 
 <td>
 
-The result status code. See [StatusCode definitions](#statuscode-definitions).
+The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -256,7 +256,7 @@ O
 
 <td>
 
-The detailed message of the result
+The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -395,7 +395,7 @@ Long
 
 <td>
 
-A [coin code](#coin-code) of the [Market](#market)
+A [coin code](../../5_Terms.md#coin-code) of the [Market](../../5_Terms.md#market-for-coin-trading)
 
 </td>
 
@@ -423,7 +423,7 @@ String
 
 <td>
 
-A [coin code](#coin-code) of the [Currency](#currency)
+A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading)
 
 </td>
 
@@ -746,7 +746,7 @@ the status of the order. It is one of the following:<br/>
 \- "CREATE": The order is created.<br/>
 \- "REQUEST": The order is registered to the order book.<br/>
 \- "PROCESS": The order is partially cancelled or filled.<br/>
-\- "COMPLETE": The order is [completed](#completed-order) (including cancellation).
+\- "COMPLETE": The order is [completed](../../5_Terms.md#completed-order) (including cancellation).
 
 </td>
 

@@ -74,7 +74,7 @@ Retrieves records for the given coin pair from the order book.
 
 <td>
 
-A case-sensitive string literal for the [Currency](#currency) and the [Market](#market) separated by '.'.<br/>
+A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by '.'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH.
 
 </td>
@@ -138,7 +138,7 @@ The book depth (the number of price levels available) to retrieve. It should be 
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `coinPair` |  A case-sensitive string literal for the [Currency](#currency) and the [Market](#market) separated by \'.\'.<br/>
+|---|---|---|---|---|| `coinPair` |  A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by \'.\'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH. | <span class="nowrap">String</span> | query |  O  || `depth` |  The book depth (the number of price levels available) to retrieve. It should be in the range of 1-1000, the default is 10. | <span class="nowrap">Integer</span> | query |     | -->
 
 ## Response
@@ -246,7 +246,7 @@ O
 
 <td>
 
-The result status code. See [StatusCode definitions](#statuscode-definitions).
+The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -274,7 +274,7 @@ O
 
 <td>
 
-The detailed message of the result
+The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -327,7 +327,7 @@ See the reference object.
   - Type:  object
     </p>
     The order book including bid and ask.<br/>
-    It forms as a key-list map; the key of the map can be "BID" or "ASK", and each item in the list has a price and an amount. See the [detailed description](#definitions-priceAmount).
+    It forms as a key-list map; the key of the map can be "BID" or "ASK", and each item in the list has a price and an amount. See the [detailed description](#priceamount).
 
 <table>
 

@@ -13,7 +13,7 @@
   .sidebar-nav>ul>li>ul>li>ul>li>a:before {
     content: '';
   }
-  .markdown-section .header th {
+  .markdown-section th {
     border-top: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
   }
@@ -35,12 +35,12 @@
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
 </head>
 <body>
-  
+
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'BITBOX API Guide',
-      repo: 'https://git.linecorp.com/jeongeun-jeon/Bitbox-api-doc',
+      name: 'BITBOX Open API documentation',
+      repo: 'https://github.com/bitbox-exchange/bitbox-api-docs',
       loadSidebar: true,
       subMaxLevel: 2,
       loadNavbar: true,
@@ -49,6 +49,30 @@
       autoHeader: false,
       relativePath: true,
       ext: '.md',
+      markdown: {
+        renderer: {
+          link: function() {
+            if(arguments[0].startsWith('..')){       // relativePath handler
+              splits = arguments[0].split('..')
+              currentpath = window.location.hash.split('/')
+              upcount = splits.length-1
+              currentpath.splice(currentpath.length - 1 - upcount, upcount + 1)
+              currentpath.splice(0, 1) // remove the the first #
+              arguments[0] = currentpath.join('/') + splits[splits.length-1]
+            }
+
+            else if( window.location.href.includes('/ko/') && !arguments[0].endsWith('/') && !arguments[0].startsWith('#') && !arguments[0].startsWith('..')) {
+              arguments[0] = "/ko/" + arguments[0]
+              // return this.origin.link.apply(this, arguments);
+            }
+
+            // return marked.link(href, title, text)
+            return this.origin.link.apply(this, arguments);
+           // return '<a href="#/' + href.replace('.md', '') + '">' + text + '</a>';
+            // return href + title + text
+          }
+        }
+      },
       // basePath: '/en/',
       themeColor: '#1b73dd',
       // coverpage: true,

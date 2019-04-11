@@ -76,8 +76,8 @@ You can set the conditions through the query parameters. See the parameter descr
 
 <td>
 
-A string literal for the [Currency](#currency).<br/>
-For example, BCH for Bitcoin Cash. (See [Trading pair policy](#trading-pair-policy).)
+A string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading).<br/>
+For example, BCH for Bitcoin Cash.
 
 </td>
 
@@ -283,8 +283,8 @@ The number of records each page will display. The default is 20, and maximum is 
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `currency` |  A string literal for the [Currency](#currency).<br/>
-For example, BCH for Bitcoin Cash. (See [Trading pair policy](#trading-pair-policy).) | <span class="nowrap">String</span> | query |     || `startTime` |  The earliest time of trades to retrieve. It is in milliseconds in UTC. | <span class="nowrap">Long</span> | query |     || `endTime` |  The latest time of trades to retrieve. It is in milliseconds in UTC. | <span class="nowrap">Long</span> | query |     || `transferType` |  The type of transfer. It should be empty or one of the following:<br/>
+|---|---|---|---|---|| `currency` |  A string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading).<br/>
+For example, BCH for Bitcoin Cash. | <span class="nowrap">String</span> | query |     || `startTime` |  The earliest time of trades to retrieve. It is in milliseconds in UTC. | <span class="nowrap">Long</span> | query |     || `endTime` |  The latest time of trades to retrieve. It is in milliseconds in UTC. | <span class="nowrap">Long</span> | query |     || `transferType` |  The type of transfer. It should be empty or one of the following:<br/>
 - \"WITHDRAW\": retrieves the withdrawal records only.<br/>
 - \"DEPOSIT\": retrieve the deposit records only.<br/>
 Omit it to retrieve both types of transfer.<br/>
@@ -398,7 +398,7 @@ O
 
 <td>
 
-The result status code. See [StatusCode definitions](#statuscode-definitions).
+The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -426,7 +426,7 @@ O
 
 <td>
 
-The detailed message of the result
+The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
 
 </td>
 

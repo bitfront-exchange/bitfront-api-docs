@@ -1,0 +1,50 @@
+# Trading pair policy
+
+| No | Coin pair | Minimum Trade Amount | Minimum Tick Size | Minimum Order Value |
+| -- | :-------: | -------------------: | ----------------: | ------------------: |
+| 1  |  BCH/BTC  |            0.001 BCH |      0.000001 BTC |           0.001 BTC |
+| 2  |  ETC/BTC  |             0.01 ETC |      0.000001 BTC |           0.001 BTC |
+| 3  |  ETH/BTC  |            0.001 ETH |      0.000001 BTC |           0.001 BTC |
+| 4  |  LTC/BTC  |             0.01 LTC |      0.000001 BTC |           0.001 BTC |
+| 5  |  XRP/BTC  |                1 XRP |    0.00000001 BTC |           0.001 BTC |
+| 6  |  BTG/BTC  |             0.01 BTG |      0.000001 BTC |           0.001 BTC |
+| 7  |  ELF/BTC  |             0.01 ELF |    0.00000001 BTC |           0.001 BTC |
+| 8  | MONA/BTC  |            0.01 MONA |    0.00000001 BTC |           0.001 BTC |
+| 9  |  OMG/BTC  |             0.01 OMG |      0.000001 BTC |           0.001 BTC |
+| 10 | QTUM/BTC  |            0.01 QTUM |      0.000001 BTC |           0.001 BTC |
+| 11 |  BAT/BTC  |                1 BAT |    0.00000001 BTC |           0.001 BTC |
+| 12 |  CVC/BTC  |             0.01 CVC |    0.00000001 BTC |           0.001 BTC |
+| 13 |  GNT/BTC  |                1 GNT |    0.00000001 BTC |           0.001 BTC |
+| 14 |  KNC/BTC  |             0.01 KNC |    0.00000001 BTC |           0.001 BTC |
+| 15 |  QSP/BTC  |             0.01 QSP |    0.00000001 BTC |           0.001 BTC |
+| 16 |  SNT/BTC  |                1 SNT |    0.00000001 BTC |           0.001 BTC |
+| 17 |  XLM/BTC  |                1 XLM |    0.00000001 BTC |           0.001 BTC |
+| 18 |  ZRX/BTC  |             0.01 ZRX |    0.00000001 BTC |           0.001 BTC |
+| 19 |  DGB/BTC  |                1 DGB |    0.00000001 BTC |           0.001 BTC |
+| 20 |  RDD/BTC  |                1 RDD |    0.00000001 BTC |           0.001 BTC |
+| 21 |  REP/BTC  |             0.01 REP |    0.00000001 BTC |           0.001 BTC |
+| 22 | NCASH/BTC |              1 NCASH |    0.00000001 BTC |           0.001 BTC |
+| 23 |  ZIL/BTC  |                1 ZIL |    0.00000001 BTC |           0.001 BTC |
+| 24 | AION/BTC  |            0.01 AION |      0.000001 BTC |           0.001 BTC |
+| 25 | SALT/BTC  |            0.01 SALT |      0.000001 BTC |           0.001 BTC |
+| 26 |  TRX/BTC  |                1 TRX |    0.00000001 BTC |           0.001 BTC |
+| 27 |  LN/BTC   |               0.1 LN |    0.00000001 BTC |           0.001 BTC |
+| 28 |  ICX/BTC  |                1 ICX |    0.00000001 BTC |           0.001 BTC |
+| 29 |  EBC/BTC  |                1 EBC |    0.00000001 BTC |           0.001 BTC |
+| 30 | DENT/BTC  |               1 DENT |    0.00000001 BTC |           0.001 BTC |
+| 31 |  BCH/ETH  |            0.001 BCH |       0.00001 ETH |            0.01 ETH |
+| 32 |  ETC/ETH  |             0.01 ETC |      0.000001 ETH |            0.01 ETH |
+| 33 |  LTC/ETH  |             0.01 LTC |       0.00001 ETH |            0.01 ETH |
+| 34 |  XRP/ETH  |                1 XRP |    0.00000001 ETH |            0.01 ETH |
+| 35 | MONA/ETH  |            0.01 MONA |    0.00000001 ETH |            0.01 ETH |
+| 36 |  GNT/ETH  |                1 GNT |    0.00000001 ETH |            0.01 ETH |
+| 37 |  XLM/ETH  |                1 XLM |    0.00000001 ETH |            0.01 ETH |
+| 38 |  ZRX/ETH  |             0.01 ZRX |    0.00000001 ETH |            0.01 ETH |
+| 39 | AION/ETH  |            0.01 AION |      0.000001 ETH |            0.01 ETH |
+| 40 |  TRX/ETH  |                1 TRX |    0.00000001 ETH |            0.01 ETH |
+| 41 |  LN/ETH   |               0.1 LN |    0.00000001 ETH |            0.01 ETH |
+| 42 | BTC/USDT  |         0.000001 BTC |         0.01 USDT |             10 USDT |
+| 43 | ETH/USDT  |            0.001 ETH |         0.01 USDT |             10 USDT |
+| 44 | BCH/USDT  |            0.001 BCH |         0.01 USDT |             10 USDT |
+| 45 |  LN/USDT  |               0.1 LN |         0.01 USDT |             10 USDT |
+| 46 | XRP/USDT  |                1 XRP |         0.01 USDT |             10 USDT |
