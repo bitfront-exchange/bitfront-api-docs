@@ -6,6 +6,12 @@ Using BITBOX API (beta), you do not have to access the BITBOX website to check y
 
 This document describes basic information about BITBOX API (beta) and provides detailed examples.
 
+> **NOTE**
+>
+> We also provide the API guide in [Korean](ko/).
+>
+> Visit [here](https://bitbox-exchange.github.io/bitbox-api-docs/) to see the web version of this document. 
+
 * [Overview](1_Overview.md)
 * [Authentication and security](2_Authentication_and_Security_Policy.md)
 * [Reference](3_Reference.md)

@@ -6,6 +6,10 @@ BITBOX API (beta)를 사용하면 BITBOX 사이트에 접속하지 않고도 계
 
 여기서는 BITBOX API (beta)의 기본 정보를 기술하고 상세한 예시를 제공합니다.
 
+> **NOTE**
+>
+> 웹 버전 문서를 보려면 [여기](https://bitbox-exchange.github.io/bitbox-api-docs/)를 방문하세요.
+
 * [개요](1_Overview.md)
 * [인증 및 보안 정책](2_Authentication_and_Security_Policy.md)
 * [Reference](3_Reference.md)
