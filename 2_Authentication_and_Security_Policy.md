@@ -1,14 +1,13 @@
 # Authentication and security policy
 
-BITBOX API (beta) has an authentication and security policy for user protection.
+BITBOX API has an authentication and security policy for user protection.
 All users who want to use the API must comply with the policy.
 
 ## API KEY and API SECRET
 
-To use BITBOX API (beta), you must have your own API KEY and API SECRET.
+To use BITBOX API, you must have your own API KEY and API SECRET.
 
-  - To gain an API KEY and an API SECRET, see the [notice in BITBOX](https://www.bitbox.me/notice/20091925).
-    You must sign up to [BITBOX](http://bitbox.me) to get API KEY and API SECRET.
+  - To gain an API KEY and an API SECRET, you must sign up to [BITBOX](http://bitbox.me). See [Prerequisites](1_Overview.md#prerequisites) for details.
   - API KEYs and API SECRETs are case sensitive.
 
 > **Note**
@@ -19,11 +18,11 @@ To use BITBOX API (beta), you must have your own API KEY and API SECRET.
 
 ### For public APIs
 
-For public APIs which start with `/v1/public`, the following parameter must be included in the HTTP header.
+For public APIs which start with `/v*/public` or `/v*/market/public`, the following parameter must be included in the HTTP header.
 
-| **Parameter name** | **Description**                  |
-| ------------------ | -------------------------------- |
-| `X-API-KEY`        | API KEY of user issued by BITBOX |
+| Parameter name | Description                      |
+| -------------- | -------------------------------- |
+| `X-API-KEY`    | API KEY of user issued by BITBOX |
 
 Here is an example of a request.
 
@@ -68,8 +67,7 @@ Requests are deemed as unsafe and rejected under the following conditions:
 
 The number of requests per API KEY is limited as follows:
 
-  - For orders or order cancellations, one API KEY handles a maximum of 30 RPS.
-  - For requests other than orders or order cancellations, one API KEY handles a maximum of 50 RPS.
+  - For all requests, each API Key is limited to 5 RPS (requests per second) by default, unless otherwise agreed.
   - For orders or order cancellations, the recommended interval between requests is at least 10ms. Any interval shorter than the recommendation can result in failure.
   - Any requests exceeding the RPS limit are rejected.
 

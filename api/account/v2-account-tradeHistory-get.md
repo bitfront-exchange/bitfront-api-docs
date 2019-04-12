@@ -5,7 +5,8 @@ You can set the conditions through the query parameters. See the parameter descr
 
 > **Note**<br/>
 > \- The maximum period for the date condition is 30 days. In other words, the number of days from `startTime` to `endTime` MUST NOT exceed 30.<br/>
-> \- The result records will be stored in `responseData` and sorted in descending order of `responseData[].createAt`.
+> \- The result records will be stored in `responseData` and sorted in descending order of `responseData[].createAt`.<br/>
+> \- This API is allowed just 1 RPS regardless of the general rule on [RPS limit policy](../../2_Authentication_and_Security_Policy.md#rps-limit-policy).
 
 ## Endpoint URI
 

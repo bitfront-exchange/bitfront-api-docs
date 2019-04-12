@@ -3,7 +3,7 @@
 Shows the latest data on BITBOX's coin pairs<br/>
 
 > **Note**<br/>
-> For this API, only `X-API-Key` in the header parameter is needed.
+> Only `X-API-Key` in the header parameter is needed.
 
 ## Endpoint URI
 
@@ -293,7 +293,7 @@ O
 
 <td>
 
-\[Currency\]\[Current (for coin trading)\] type. Displayed as [coin code](../../5_Terms.md#coin-code). e. g. Bitcoin as "BTC" and Ethereum as "ETH"
+[Currency](../../5_Terms.md#currency-for-coin-trading) type. Displayed as [coin code](../../5_Terms.md#coin-code). e. g. Bitcoin as "BTC" and Ethereum as "ETH"
 
 </td>
 

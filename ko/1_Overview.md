@@ -2,26 +2,25 @@
 
 암호화폐 거래소인 BITBOX는 거래를 프로그래밍할 수 있도록 API를 제공합니다.
 
-BITBOX API (beta)를 사용하면 BITBOX 사이트에 접속하지 않고도 계정 상태나 거래 내역을 확인할 수 있고, 암호화폐를 사거나 팔 수 있습니다. 또 설정한 조건에 따라 자동으로 주문을 할 수도 있습니다. 예를 들어 어떤 암호화폐의 가격이 5%를 초과하여 하락할 때 특정 양을 구매하는 것이 가능합니다.
+BITBOX API를 사용하면 BITBOX 사이트에 접속하지 않고도 계정 상태나 거래 내역을 확인할 수 있고, 암호화폐를 사거나 팔 수 있습니다. 또 설정한 조건에 따라 자동으로 주문을 할 수도 있습니다. 예를 들어 어떤 암호화폐의 가격이 5%를 초과하여 하락할 때 특정 양을 구매하는 것이 가능합니다.
 
-여기서는 BITBOX API (beta)의 기본 정보를 기술하고 상세한 예시를 제공합니다.
+여기서는 BITBOX API의 기본 정보를 기술하고 상세한 예시를 제공합니다.
 
 ## 사전 준비
 
-BITBOX API (beta)는 REST API입니다.
+BITBOX API는 REST API입니다.
 모든 요청과 응답은 HTTPS로 전송되므로 HTTPS를 지원하는 어떤 플랫폼에서든 API를 호출할 수 있습니다.
 요청에 문제가 발생하지 않도록 여기서 기술하는 기본 정보와 각 API의 상세 설명을 자세히 읽어보시기 바랍니다.
 
-BITBOX API (beta)를 사용하려면 BITBOX에 사용 신청을 해야 합니다.
+BITBOX API를 사용하려면 API KEY를 발급받아야 합니다. [BITBOX 홈페이지](https://bitbox.me)에 로그인한 후 “계정” \> “Open API” 메뉴에서 발급 신청하십시오.
 
-BITBOX ID와 개발하고자 하는 서비스 혹은 앱이 사용할 허가 IP 목록을 작성하여 [BITBOX에 요청](https://contact.bitbox.me/)하십시오.
-신청이 완료되면 API KEY와 API SECRET 같은 인증 정보를 받게 됩니다.
+발급이 완료되면 API KEY와 API SECRET 같은 인증 정보를 받게 됩니다.
 API 요청에는 반드시 API KEY를 헤더에 넣어 전달해야 하며, API 서버는 유효한 API KEY를 가진 요청만 처리합니다.
 API SECRET은 API 요청을 서명하기 위한 비밀 키입니다. 상세한 것은 [인증 및 보안 정책](2_Authentication_and_Security_Policy.md#인증-및-보안-정책)을 참고하십시오.
 
 ## Endpoint
 
-BITBOX API (beta)의 endpoint는 다음과 같습니다.
+BITBOX API의 endpoint는 다음과 같습니다.
 
 ``` postscript
 https://openapi.bitbox.me/{version}/{api_path}?{query_string}
@@ -34,7 +33,7 @@ https://openapi.bitbox.me/{version}/{api_path}?{query_string}
 
 ## 요청
 
-BITBOX API (beta)의 API 요청은 다음 조건을 따라야 합니다.
+BITBOX API의 API 요청은 다음 조건을 따라야 합니다.
 
   - 모든 API 요청은 HTTPS로 전송합니다.
   - API에 따라 GET, POST, PUT, DELETE 메서드를 사용할 수 있습니다.
@@ -49,7 +48,7 @@ BITBOX API (beta)의 API 요청은 다음 조건을 따라야 합니다.
 
 ## 응답
 
-BITBOX API (beta)는 요청에 대한 결과를 응답 객체(Response Object)로 전달합니다.
+BITBOX API는 요청에 대한 결과를 응답 객체(Response Object)로 전달합니다.
 API 서버에 문제가 없을 때 응답의 HTTP 상태 코드는 200이며, 상세한 처리 결과는 수신한 응답 객체를 통해 확인할 수 있습니다.
 
 > **주의**

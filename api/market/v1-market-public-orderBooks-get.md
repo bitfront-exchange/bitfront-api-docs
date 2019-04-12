@@ -1,6 +1,9 @@
 # Order book
 
-Retrieves records for the given coin pair from the order book.
+Retrieves records for the given coin pair from the order book.<br/>
+
+> **Note**<br/>
+> Only `X-API-Key` in the header parameter is needed.
 
 ## Endpoint URI
 
@@ -327,7 +330,7 @@ See the reference object.
   - Type:  object
     </p>
     The order book including bid and ask.<br/>
-    It forms as a key-list map; the key of the map can be "BID" or "ASK", and each item in the list has a price and an amount. See the [detailed description](#priceamount).
+    It forms as a key-list map; the key of the map can be "BID" or "ASK", and each item in the list has a price and an amount. See the detailed description.
 
 <table>
 
@@ -387,7 +390,7 @@ See the reference object.
 
 <td>
 
-Array of [priceAmount](#priceamount)See the reference object.
+Array of [priceAmount](#priceamount). See the reference object.
 
 </td>
 
@@ -415,7 +418,7 @@ array
 
 <td>
 
-Array of [priceAmount](#priceamount)See the reference object.
+Array of [priceAmount](#priceamount). See the reference object.
 
 </td>
 
@@ -437,7 +440,7 @@ array
 
 </table>
 
-priceAmount
+### priceAmount
 
   - Type:  object
     </p>

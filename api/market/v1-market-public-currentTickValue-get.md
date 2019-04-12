@@ -1,7 +1,10 @@
 # Tick values
 
 Retrieves the current tick values for the given coin pair.<br/>
-The tick values include bid, ask, last prices, 24 hour volume, and others.
+The tick values include bid, ask, last prices, 24 hour volume, and others.<br/>
+
+> **Note**<br/>
+> Only `X-API-Key` in the header parameter is needed.
 
 ## Endpoint URI
 

@@ -1,6 +1,6 @@
 # Reference
 
-In this section, you can find the detailed descriptions of each API included in BITBOX API (beta).
+In this section, you can find the detailed descriptions of each API included in BITBOX API.
 
 > **Note**
 > 

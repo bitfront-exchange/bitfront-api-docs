@@ -4,6 +4,7 @@ Retrieves the recent trade records under the given conditions in BITBOX. You can
 See the parameter descriptions.<br/>
 
 > **Note**<br/>
+> \- Only `X-API-Key` in the header parameter is needed.<br/>
 > \- It only provides trade records over the last 3 months.<br/>
 > \- The result records will be stored in `responseData` and sorted in descending order of `responseData[].createAt`.
 

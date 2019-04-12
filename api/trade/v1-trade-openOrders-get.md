@@ -112,7 +112,7 @@ For example, BCH for Bitcoin Cash.
 
 <td>
 
-A [coin code](../../5_Terms.md#coin-code) of the \[Currency\]([Currency (for coin trading)](../../5_Terms.md#currency-for-coin-trading).<br/>
+A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading).<br/>
 For example, ETH for Ethereum.
 
 </td>
@@ -177,7 +177,7 @@ Total number of open orders to retrieve. You can enter between 1 and 100. The de
 
 <!-- | Name | Description | Type | Loc. | Required |
 |---|---|---|---|---|| `market` |  A [coin code](../../5_Terms.md#coin-code) of the [Market](../../5_Terms.md#market-for-coin-trading).<br/>
-For example, BCH for Bitcoin Cash. | <span class="nowrap">String</span> | query |     || `currency` |  A [coin code](../../5_Terms.md#coin-code) of the \[Currency\]([Currency (for coin trading)](../../5_Terms.md#currency-for-coin-trading).<br/>
+For example, BCH for Bitcoin Cash. | <span class="nowrap">String</span> | query |     || `currency` |  A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading).<br/>
 For example, ETH for Ethereum. | <span class="nowrap">String</span> | query |     || `max` |  Total number of open orders to retrieve. You can enter between 1 and 100. The default is 100. | <span class="nowrap">Integer</span> | query |     | -->
 
 ## Response
@@ -368,7 +368,7 @@ See the reference object.
 
 Array of [openOrder](#openorder)
 
-openOrder
+### openOrder
 
   - Type:  object
     </p>
@@ -545,7 +545,7 @@ String
 
 <td>
 
-See the reference object.
+. See the reference object.
 
 </td>
 
@@ -573,7 +573,7 @@ Double
 
 <td>
 
-See the reference object.
+. See the reference object.
 
 </td>
 
@@ -601,7 +601,7 @@ Double
 
 <td>
 
-See the reference object.
+. See the reference object.
 
 </td>
 

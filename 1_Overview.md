@@ -2,26 +2,25 @@
 
 BITBOX, a crypto-to-crypto exchange, provides APIs for programmatic crypto trading.
 
-Using BITBOX API (beta), you do not have to access the BITBOX website to check your account status, trading history, or to buy and sell crypto. You can also automate your trading orders based on set criteria, such as buying a set amount of coins when the price drops by more than 5%.
+Using BITBOX API, you do not have to access the BITBOX website to check your account status, trading history, or to buy and sell crypto. You can also automate your trading orders based on set criteria, such as buying a set amount of coins when the price drops by more than 5%.
 
-This document describes basic information about BITBOX API (beta) and provides detailed examples.
+This document describes basic information about BITBOX API and provides detailed examples.
 
 ## Prerequisites
 
-BITBOX API (beta) is RESTful.
+BITBOX API is RESTful.
 All requests and responses are transmitted via HTTPS, meaning that you can call APIs from any platform that supports HTTPS.
 For successful operation of API request calls, read this section and descriptions of each API carefully.
 
-In order to use BITBOX API (beta), you must get an approval from BITBOX.
+You must get your API Key before you can use the BITBOX API. First, log in to the [BITBOX website](https://bitbox.me) and request for the API Key under “Account” \> “Open API”.
 
-[Contact BITBOX](https://contact.bitbox.me/) with your BITBOX ID and a whitelist of IP calling addresses of your services or apps.
-Once approved, you will receive your credentials such as API KEY and API SECRET.
+Once completed, you will receive your credentials such as API KEY and API SECRET.
 All API requests have to pass an API KEY in the header, and the requests that have a valid API KEY are allowed.
 API SECRET is a secret key to sign API requests. For details, see [Authentication and security policy](2_Authentication_and_Security_Policy.md#authentication-and-security-policy).
 
 ## Endpoint
 
-The endpoint of BITBOX API (beta) is as follows:
+The endpoint of BITBOX API is as follows:
 
 ``` postscript
 https://openapi.bitbox.me/{version}/{api_name}?{query_string}
@@ -34,7 +33,7 @@ https://openapi.bitbox.me/{version}/{api_name}?{query_string}
 
 ## Request
 
-All API requests on BITBOX API (beta) must meet the following requirements:
+All API requests on BITBOX API must meet the following requirements:
 
   - All requests must be sent via HTTPS.
   - GET, POST, PUT, or DELETE method can be used depending on the API.
@@ -42,14 +41,14 @@ All API requests on BITBOX API (beta) must meet the following requirements:
   - The list of permitted IPs must be registered to the [API KEY](2_Authentication_and_Security_Policy.md#api-key-and-api-secret) because the API server processes requests only from whitelisted IP addresses.
   - All requests must be signed. For more information, see [Signature policy](2_Authentication_and_Security_Policy.md#signature-policy).
   - Signature is for one-time use only and any request is rejected if the same signature is used again.
-  - The requests per second (RPS) handled by BITBOX API (beta) is as follows:
+  - The requests per second (RPS) handled by BITBOX API is as follows:
       - For orders or order cancellations, one API KEY handles a maximum of 30 RPS.
       - For requests other than orders or order cancellations, one API KEY handles a maximum of 50 RPS.
       - For orders or order cancellations, the recommended interval between requests is at least 10ms. Any interval shorter than the recommendation can result in failure.
 
 ## Response
 
-Results for the BITBOX API (beta) requests are returned as response objects.
+Results for the BITBOX API requests are returned as response objects.
 The HTTP status code is 200 OK when the API server has no problem and you can find detailed information about the results in the response object.
 
 > **Note**

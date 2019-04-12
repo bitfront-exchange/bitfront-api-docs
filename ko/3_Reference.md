@@ -1,6 +1,6 @@
 # Reference
 
-BITBOX API (beta)가 제공하는 모든 API의 상세 설명을 기술합니다.
+BITBOX API가 제공하는 모든 API의 상세 설명을 기술합니다.
 
 > **Note**
 > 

@@ -1,2 +1,2 @@
 * [English](/)
-* [Korean](/ko/1_Overview)
+* [Korean](/ko/)

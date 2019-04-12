@@ -5,7 +5,8 @@
 
 > **Note**<br/>
 > \- 조회 기간은 최대 30일로 제한됩니다. 즉, `startTime`에서 `endTime`까지의 날짜가 30일을 초과할 수 없습니다.<br/>
-> \- 결과 내역은 `responseData`에 저장되며 `responseData[].createAt` 기준 내림차순으로 정렬됩니다.
+> \- 결과 내역은 `responseData`에 저장되며 `responseData[].createAt` 기준 내림차순으로 정렬됩니다.<br/>
+> \- 이 API는 [RPS 제한 정책](../../2_Authentication_and_Security_Policy.md#rps-제한-정책)과 별도로, 1RPS만 허용됩니다.
 
 ## Endpoint URI
 

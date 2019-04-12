@@ -1,16 +1,16 @@
-# BITBOX API (beta) Development Guide
+# BITBOX API Development Guide
 
 BITBOX, a crypto-to-crypto exchange, provides APIs for programmatic crypto trading.
 
-Using BITBOX API (beta), you do not have to access the BITBOX website to check your account status, trading history, or to buy and sell crypto. You can also automate your trading orders based on set criteria, such as buying a set amount of coins when the price drops by more than 5%.
+Using BITBOX API, you do not have to access the BITBOX website to check your account status, trading history, or to buy and sell crypto. You can also automate your trading orders based on set criteria, such as buying a set amount of coins when the price drops by more than 5%.
 
-This document describes basic information about BITBOX API (beta) and provides detailed examples.
+This document describes basic information about BITBOX API and provides detailed examples.
 
 > **NOTE**
 >
-> We also provide the API guide in [Korean](ko/).
+> Visit [https://bitbox-exchange.github.io/bitbox-api-docs/](https://bitbox-exchange.github.io/bitbox-api-docs/) to read the document online.
 >
-> Visit [here](https://bitbox-exchange.github.io/bitbox-api-docs/) to see the web version of this document. 
+> We also provide the document in [Korean](ko/).
 
 * [Overview](1_Overview.md)
 * [Authentication and security](2_Authentication_and_Security_Policy.md)
@@ -37,7 +37,3 @@ This document describes basic information about BITBOX API (beta) and provides d
 * [Glossary](5_Terms.md)
 * [Revision history](0_About_This_Document.md)
 * [LICENSE NOTICE](LICENSE.md)
-
-> **NOTE**
->
-> We also provide the API guide in [Korean](ko/).

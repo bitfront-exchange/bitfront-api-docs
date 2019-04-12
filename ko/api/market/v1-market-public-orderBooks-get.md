@@ -1,6 +1,9 @@
 # Order book
 
-주문장에서 지정한 coin pair의 거래를 조회합니다. \> **Note** 이 API는 헤더 파라미터에 `X-API-Key`만 전달하면 됩니다.
+주문장에서 지정한 coin pair의 거래를 조회합니다.<br/>
+
+> **Note**<br/>
+> 이 API는 헤더 파라미터에 `X-API-Key`만 전달하면 됩니다.
 
 ## Endpoint URI
 
@@ -326,7 +329,7 @@ O
   - Type:  object
     </p>
     주문장은 bid 값과 ask 값을 가집니다.<br/>
-    이 데이터는 키-목록 맵으로, 키는 "BID"나 "ASK"이 되고, 목록의 각 항목은 가격과 총수량을 포함합니다. 객체의 [상세 설명](#priceamount)을 참고하십시오.
+    이 데이터는 키-목록 맵으로, 키는 "BID"나 "ASK"이 되고, 목록의 각 항목은 가격과 총수량을 포함합니다. 객체의 상세 설명을 참고하십시오.
 
 <table>
 
@@ -386,7 +389,7 @@ O
 
 <td>
 
-[priceAmount](#priceamount)의 배열입니다.대상
+[priceAmount](#priceamount)의 배열입니다. 대상
 객체 설명을 참고하십시오.
 
 </td>
@@ -415,7 +418,7 @@ array
 
 <td>
 
-[priceAmount](#priceamount)의 배열입니다.대상
+[priceAmount](#priceamount)의 배열입니다. 대상
 객체 설명을 참고하십시오.
 
 </td>
