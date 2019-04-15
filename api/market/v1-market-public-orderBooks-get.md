@@ -112,7 +112,7 @@ O
 
 <td>
 
-The book depth (the number of price levels available) to retrieve. It should be in the range of 1-1000, the default is 10.
+The book depth (the number of price levels available) to retrieve. It should be in the range of 1-1000, the default is 100.
 
 </td>
 
@@ -142,7 +142,7 @@ The book depth (the number of price levels available) to retrieve. It should be 
 
 <!-- | Name | Description | Type | Loc. | Required |
 |---|---|---|---|---|| `coinPair` |  A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by \'.\'.<br/>
-For example, BCH.ETH means buying or selling BCH with ETH. | <span class="nowrap">String</span> | query |  O  || `depth` |  The book depth (the number of price levels available) to retrieve. It should be in the range of 1-1000, the default is 10. | <span class="nowrap">Integer</span> | query |     | -->
+For example, BCH.ETH means buying or selling BCH with ETH. | <span class="nowrap">String</span> | query |  O  || `depth` |  The book depth (the number of price levels available) to retrieve. It should be in the range of 1-1000, the default is 100. | <span class="nowrap">Integer</span> | query |     | -->
 
 ## Response
 
