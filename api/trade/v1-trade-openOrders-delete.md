@@ -358,8 +358,7 @@ See the reference object.
 
 <td>
 
-Long의
-배열입니다.the list of the order IDs
+Array of Long. the list of the order IDs
 
 </td>
 
