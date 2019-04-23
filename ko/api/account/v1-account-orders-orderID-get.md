@@ -653,7 +653,7 @@ Double
 주문의 예상 가치.<br/>
 예를 들어 `currency`가 "XRP", `market`이 "BTC"일 때,<br/>
 \- `orderSide`가 "BUY"이면, `reservedValue`는 BTC로<br/>
-`requestAmount` \* `price` \* (1 + `feeRate`)입니다.<br/>
+`requestAmount` \* `price` \* (1 + *fee rate*)입니다.<br/>
 \- `orderSide`가 "SELL"이면, `reservedValue`는 XRP로<br/>
 `requestAmount`입니다.
 
@@ -686,7 +686,7 @@ Double
 주문 내 남은 총수량 예상 가치.<br/>
 예를 들어 `currency`가 "XRP", `market`이 "BTC"일 때,<br/>
 \- `orderSide`가 "BUY"이면, `reserveRemainingValue`는 BTC로<br/>
-`remainAmount` \* `price` \* (1 + `feeRate`)입니다.<br/>
+`remainAmount` \* `price` \* (1 + *fee Rate*)입니다.<br/>
 \- `orderSide`가 "SELL"이면, `reserveRemainingValue`는 XRP로<br/>
 `remainAmount`입니다.
 
@@ -710,14 +710,130 @@ Double
 
 <td>
 
-`feeRate`
+`makerFeeRate`
 
 </td>
 
 <td>
 
-수수료 비율. 수수료의 절대 값이 아닙니다.<br/>
-예를 들어 `feeRate`가 0.1이면 수수료 비율이 10%라는 의미입니다.
+[Maker](../../5_Terms.md#maker) 주문에 대한 수수료 비율.<br/>
+수수료는 절대값이 아닙니다. 예를 들어 이 값이 0.001이면 수수료 비율이 0.1%라는 의미입니다.
+
+</td>
+
+<td style="text-align: center;">
+
+Double
+
+</td>
+
+<td style="text-align: center;">
+
+ 
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`takerFeeRate`
+
+</td>
+
+<td>
+
+[Taker](../../5_Terms.md#taker) 주문에 대한 수수료 비율.<br/>
+수수료는 절대값이 아닙니다. 예를 들어 이 값이 0.001이면 수수료 비율이 0.1%라는 의미입니다.
+
+</td>
+
+<td style="text-align: center;">
+
+Double
+
+</td>
+
+<td style="text-align: center;">
+
+ 
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`enableLinkFee`
+
+</td>
+
+<td>
+
+LINK로 거래 수수료 결제 여부.<br/>
+LINK로 거래 수수료를 결제하는 방법에 관한 상세한 설명은 [Transaction fees](https://www.bitbox.me/fees/)를 참고하십시오.
+
+</td>
+
+<td style="text-align: center;">
+
+Boolean
+
+</td>
+
+<td style="text-align: center;">
+
+ 
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`makerLinkFeeRate`
+
+</td>
+
+<td>
+
+LINK로 거래 수수료 결제 시 [Maker](../../5_Terms.md#maker) 주문에 대한 수수료 비율.<br/>
+`enableLinkFee`가 false이면 이 값은 0입니다.
+
+</td>
+
+<td style="text-align: center;">
+
+Double
+
+</td>
+
+<td style="text-align: center;">
+
+ 
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`takerLinkFeeRate`
+
+</td>
+
+<td>
+
+LINK로 거래 수수료 결제 시 [Taker](../../5_Terms.md#taker) 주문에 대한 수수료 비율.<br/>
+`enableLinkFee`가 false이면 이 값은 0입니다.
 
 </td>
 
@@ -878,7 +994,11 @@ Double
        "filledAmount": 200,
        "reservedValue": 0.222013,
        "reserveRemainingValue": 0,
-       "feeRate": 0.1,
+       "makerFeeRate": 0.1,
+       "takerFeeRate": 0.1,
+       "enableLinkFee": false,
+       "makerLinkFeeRate": 0,
+       "takerLinkFeeRate": 0,
        "status": "COMPLETE",
        "createdAt": 1528998406713,
        "completedAt": 1528998406907,

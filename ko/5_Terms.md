@@ -30,8 +30,16 @@ BITBOX는 각 암호화폐에 대해 공식적으로 혹은 널리 사용되는 
 
 [Market](#market-for-coin-trading)도 함께 참고하십시오.
 
+## Maker
+
+체결되지 않는 주문을 걸어 호가창에 매수/매도 잔량을 만드는 사용자를 의미합니다.
+
 ## Market (for coin trading)
 
 이 문서에서는 A로 B를 구매할 때 A를 Market이라고 부릅니다. 예를 들어 비트코인으로 이더리움을 구매할 때는 비트코인이 Market이 됩니다.
 
 [Currency](#currency-for-coin-trading)도 함께 참고하십시오.
+
+## Taker
+
+호가창의 매수/매도 잔량을 자신의 주문으로 즉시 체결시키는 사용자를 의미합니다.
