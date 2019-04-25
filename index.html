@@ -61,7 +61,7 @@
               arguments[0] = currentpath.join('/') + splits[splits.length-1]
             }
 
-            else if( window.location.href.includes('/ko/') && !arguments[0].endsWith('/') && !arguments[0].startsWith('#') && !arguments[0].startsWith('..')) {
+            else if( window.location.href.includes('/ko/') && !arguments[0].endsWith('/') && !arguments[0].startsWith('#') && !arguments[0].startsWith('..') && !arguments[0].startsWith('http')) {
               arguments[0] = "/ko/" + arguments[0]
               // return this.origin.link.apply(this, arguments);
             }

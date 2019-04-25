@@ -686,7 +686,7 @@ Double
 주문 내 남은 총수량 예상 가치.<br/>
 예를 들어 `currency`가 "XRP", `market`이 "BTC"일 때,<br/>
 \- `orderSide`가 "BUY"이면, `reserveRemainingValue`는 BTC로<br/>
-`remainAmount` \* `price` \* (1 + *fee Rate*)입니다.<br/>
+`remainAmount` \* `price` \* (1 + *fee rate*)입니다.<br/>
 \- `orderSide`가 "SELL"이면, `reserveRemainingValue`는 XRP로<br/>
 `remainAmount`입니다.
 
@@ -994,8 +994,8 @@ Double
        "filledAmount": 200,
        "reservedValue": 0.222013,
        "reserveRemainingValue": 0,
-       "makerFeeRate": 0.1,
-       "takerFeeRate": 0.1,
+       "makerFeeRate": 0.001,
+       "takerFeeRate": 0.001,
        "enableLinkFee": false,
        "makerLinkFeeRate": 0,
        "takerLinkFeeRate": 0,

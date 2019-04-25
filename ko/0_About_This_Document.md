@@ -1,5 +1,15 @@
 ## Revision history
 
+**v0.4 (2019-4-25)**
+
+  - 주요 변경
+    
+    BITBOX의 [Maker](5_Terms.md#maker) 및 [Taker](5_Terms.md#taker) 거래수수료 차등수취 및 LINK로 수수료를 지불하는 정책에 따라 Order information API(`/v1/account/orders/{orderID}`)의 반환값이 변경되었습니다.
+
+  - API 설명 업데이트
+    
+      - [Order information](api/account/v1-account-orders-orderID-get.md#order-information) 반환값에 `feeRate` 필드 제거, `makerFeeRate`, `takerFeeRate`, `enableLinkFee`, `makerLinkFeeRate`, `takerLinkFeeRate` 필드 추가
+
 **v0.3 (2019-4-15)**
 
   - 주요 변경

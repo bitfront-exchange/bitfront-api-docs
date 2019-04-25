@@ -653,7 +653,7 @@ Double
 
 The reserved value for the order.<br/>
 For example, in "XRP" Currency and "BTC" Market,<br/>
-\- When `orderSide` is "BUY", `reservedValue` in BTC is `requestAmount` \* `price` \* (1 + `feeRate`).<br/>
+\- When `orderSide` is "BUY", `reservedValue` in BTC is `requestAmount` \* `price` \* (1 + *fee rate*).<br/>
 \- When `orderSide` is "SELL", `reservedValue` in XRP is `requestAmount`.
 
 </td>
@@ -684,7 +684,7 @@ Double
 
 The reserved value for the remaining amount of the order.<br/>
 For example, in "XRP" Currency and "BTC" Market,<br/>
-\- When `orderSide` is "BUY", `reserveRemainingValue` in BTC is `remainAmount` \* `price` \* (1 + `feeRate`).<br/>
+\- When `orderSide` is "BUY", `reserveRemainingValue` in BTC is `remainAmount` \* `price` \* (1 + *fee rate*).<br/>
 \- When `orderSide` is "SELL", `reserveRemainingValue` in XRP is `remainAmount`.
 
 </td>
@@ -707,14 +707,130 @@ Double
 
 <td>
 
-`feeRate`
+`makerFeeRate`
 
 </td>
 
 <td>
 
-The rate of fee. It is not an absolute value.<br/>
-For example, if `feeRate` is 0.1, it means 10%.
+Fee rate for a [Maker](../../5_Terms.md#maker) order.<br/>
+Fee rate is not an absolute value. i. e. If the value is 0.001, this indicates that the fee rate is 0.1%.
+
+</td>
+
+<td style="text-align: center;">
+
+Double
+
+</td>
+
+<td style="text-align: center;">
+
+ 
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`takerFeeRate`
+
+</td>
+
+<td>
+
+Fee rate for a [Taker](../../5_Terms.md#taker) order.<br/>
+Fee rate is not an absolute value. i. e. If the value is 0.001, this indicates that the fee rate is 0.1%.
+
+</td>
+
+<td style="text-align: center;">
+
+Double
+
+</td>
+
+<td style="text-align: center;">
+
+ 
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`enableLinkFee`
+
+</td>
+
+<td>
+
+Whether to pay the fee with LINK.<br/>
+Refer to the [Transaction fees](https://www.bitbox.me/fees/) for further information on how to pay the transaction fee with LINK.
+
+</td>
+
+<td style="text-align: center;">
+
+Boolean
+
+</td>
+
+<td style="text-align: center;">
+
+ 
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`makerLinkFeeRate`
+
+</td>
+
+<td>
+
+Fee rate for a [Maker](../../5_Terms.md#maker) order when paying fees with LINK.<br/>
+If `enableLinkFee` is set as false, this value is '0'.
+
+</td>
+
+<td style="text-align: center;">
+
+Double
+
+</td>
+
+<td style="text-align: center;">
+
+ 
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`takerLinkFeeRate`
+
+</td>
+
+<td>
+
+Fee rate for a [Taker](../../5_Terms.md#taker) order when paying fees with LINK.<br/>
+If `enableLinkFee` is set as false, this value is '0'.
 
 </td>
 
@@ -875,7 +991,11 @@ Double
         "filledAmount": 200,
         "reservedValue": 0.222013,
         "reserveRemainingValue": 0,
-        "feeRate": 0.1,
+        "makerFeeRate": 0.001,
+        "takerFeeRate": 0.001,
+        "enableLinkFee": false,
+        "makerLinkFeeRate": 0,
+        "takerLinkFeeRate": 0,
         "status": "COMPLETE",
         "createdAt": 1528998406713,
         "completedAt": 1528998406907,

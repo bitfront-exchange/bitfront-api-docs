@@ -30,8 +30,16 @@ When you want to buy Ethereum with Bitcoin, the Ethereum is the Currency.
 
 See [Market](#market-for-coin-trading) also.
 
+## Maker
+
+When a user places a buy/sell order which is not immediately matched by an existing order and the order is added to the order book, that user is considered as a Maker.
+
 ## Market (for coin trading)
 
 When you want to buy Ethereum with Bitcoin, the Bitcoin is the Market.
 
 See [Currency](#currency-for-coin-trading) also.
+
+## Taker
+
+When a user places a buy/sell order that is immediately filled, that user is considered as a Taker.

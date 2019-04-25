@@ -1,5 +1,15 @@
 ## Revision history
 
+**v0.4 (2019-4-25)**
+
+  - Key changes
+    
+    Pursuant to the BITBOX’s policy on the tiered fee structure for [Maker](5_Terms.md#maker) & [Taker](5_Terms.md#taker) and fee payment with LINK, the return value of Order information API (`/v1/account/orders/{orderID}`) has been changed.
+
+  - Update API descriptions
+    
+      - `feeRate` field was deleted from the return value of [Order information](api/account/v1-account-orders-orderID-get.md#order-information), and the new fields, namely `makerFeeRate`, `takerFeeRate`, `enableLinkFee`, `makerLinkFeeRate`, and `takerLinkFeeRate`, were added.
+
 **v0.3 (2019-4-15)**
 
   - Key updates
