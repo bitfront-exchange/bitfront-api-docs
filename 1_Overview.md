@@ -22,9 +22,7 @@ API SECRET is a secret key to sign API requests. For details, see [Authenticatio
 
 The endpoint of BITBOX API is as follows:
 
-``` postscript
-https://openapi.bitbox.me/{version}/{api_name}?{query_string}
-```
+    https://openapi.bitbox.me/{version}/{api_name}?{query_string}
 
   - `https://openapi.bitbox.me/` is the base URL of the API.
   - `version` is the version of the API set.
@@ -41,10 +39,7 @@ All API requests on BITBOX API must meet the following requirements:
   - The list of permitted IPs must be registered to the [API KEY](2_Authentication_and_Security_Policy.md#api-key-and-api-secret) because the API server processes requests only from whitelisted IP addresses.
   - All requests must be signed. For more information, see [Signature policy](2_Authentication_and_Security_Policy.md#signature-policy).
   - Signature is for one-time use only and any request is rejected if the same signature is used again.
-  - The requests per second (RPS) handled by BITBOX API is as follows:
-      - For orders or order cancellations, one API KEY handles a maximum of 30 RPS.
-      - For requests other than orders or order cancellations, one API KEY handles a maximum of 50 RPS.
-      - For orders or order cancellations, the recommended interval between requests is at least 10ms. Any interval shorter than the recommendation can result in failure.
+  - The requests per second (RPS) handled by BITBOX API follows the [RPS limit policy](2_Authentication_and_Security_Policy.md#rps-limit-policy).
 
 ## Response
 

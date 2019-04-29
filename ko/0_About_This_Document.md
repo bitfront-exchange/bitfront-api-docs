@@ -1,6 +1,6 @@
 ## Revision history
 
-**v0.4 (2019-4-25)**
+**v0.4 (2019-4)**
 
   - 주요 변경
     
@@ -9,6 +9,10 @@
   - API 설명 업데이트
     
       - [Order information](api/account/v1-account-orders-orderID-get.md#order-information) 반환값에 `feeRate` 필드 제거, `makerFeeRate`, `takerFeeRate`, `enableLinkFee`, `makerLinkFeeRate`, `takerLinkFeeRate` 필드 추가
+
+  - 문서 오류 교정
+    
+      - [요청](1_Overview.md#요청)에 기술된 RPS 한도를 현재 시스템 정책에 따라 수정
 
 **v0.3 (2019-4-15)**
 

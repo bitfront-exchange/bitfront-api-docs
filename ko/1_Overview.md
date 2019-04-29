@@ -22,9 +22,7 @@ API SECRET은 API 요청을 서명하기 위한 비밀 키입니다. 상세한 �
 
 BITBOX API의 endpoint는 다음과 같습니다.
 
-``` postscript
-https://openapi.bitbox.me/{version}/{api_path}?{query_string}
-```
+    https://openapi.bitbox.me/{version}/{api_path}?{query_string}
 
   - `https://openapi.bitbox.me/` 는 API의 기본 URL입니다.
   - `version`은 사용할 API 집합의 버전입니다.
@@ -41,10 +39,7 @@ BITBOX API의 API 요청은 다음 조건을 따라야 합니다.
   - API 서버는 등록된 IP를 가진 서버에서 전송한 요청만 처리하므로 반드시 [API KEY](2_Authentication_and_Security_Policy.md#api-key와-api-secret)에 허용 IP 목록을 등록해야 합니다.
   - 요청은 반드시 서명을 포함해야 합니다. 상세 내용은 [서명 정책](2_Authentication_and_Security_Policy.md#서명-정책)에서 기술합니다.
   - 하나의 서명은 한 번만 유효하며 중복 서명을 사용하면 API 서버가 요청을 거절합니다.
-  - BITBOX API는 다음의 RPS 정책을 따릅니다.
-      - 주문 또는 주문 취소 요청일 경우, 하나의 API KEY는 30 RPS를 허용합니다.
-      - 주문 또는 주문 취소 외의 요청일 경우, 하나의 API KEY는 50 RPS를 허용합니다.
-      - 주문 또는 주문 취소 요청일 경우, 각 요청 간 시간 간격은 최소 10ms를 권장합니다. 이보다 짧으면 요청을 처리하는데 실패할 수 있습니다.
+  - BITBOX API 초당 요청 수는 [RPS 제한 정책](2_Authentication_and_Security_Policy.md#rps-제한-정책)을 따라야 합니다.
 
 ## 응답
 
