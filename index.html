@@ -47,7 +47,6 @@
       maxLevel: 4,
       auto2top: true,
       autoHeader: false,
-      relativePath: true,
       ext: '.md',
       markdown: {
         renderer: {
@@ -62,7 +61,11 @@
             }
 
             else if( window.location.href.includes('/ko/') && !arguments[0].endsWith('/') && !arguments[0].startsWith('#') && !arguments[0].startsWith('..') && !arguments[0].startsWith('http')) {
-              arguments[0] = "/ko/" + arguments[0]
+              if( arguments[0].startsWith('/') ) {
+                arguments[0] = "/ko" + arguments[0]
+              } else {
+                arguments[0] = "/ko/" + arguments[0]
+              }
               // return this.origin.link.apply(this, arguments);
             }
 
