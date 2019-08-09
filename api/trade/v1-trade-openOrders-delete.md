@@ -5,7 +5,7 @@ For each order, if the order is partially filled, it only tries to cancel the re
 
 > **Caution**<br/>
 > `statusCode` of 1000 means the cancellation is NOT successfully done BUT requested well.<br/>
-> If you want to check whether the order has been cancelled, use [`/v1/account/orders/{orderID}`](../account/v1-account-orders-orderID-get.md#order-information).
+> If you want to check whether the order has been cancelled, use [`/v2/account/orders/{orderID}`](/api/account/v2-account-orders-orderID-get.md#order-information-v2).
 
 ## Endpoint URI
 
@@ -79,8 +79,8 @@ For each order, if the order is partially filled, it only tries to cancel the re
 
 <td>
 
-A [coin pair](../../5_Terms.md#coin-pair) for the orders to request to cancel.<br/>
-A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by '.'.<br/>
+A [coin pair](/5_Terms.md#coin-pair) for the orders to request to cancel.<br/>
+A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by '.'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH.
 
 </td>
@@ -110,8 +110,8 @@ O
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `coinPair` |  A [coin pair](../../5_Terms.md#coin-pair) for the orders to request to cancel.<br/>
-A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by \'.\'.<br/>
+|---|---|---|---|---|| `coinPair` |  A [coin pair](/5_Terms.md#coin-pair) for the orders to request to cancel.<br/>
+A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by \'.\'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH. | <span class="nowrap">String</span> | path |  O  | -->
 
 ## Response
@@ -219,7 +219,7 @@ O
 
 <td>
 
-The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -247,7 +247,7 @@ O
 
 <td>
 
-The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 

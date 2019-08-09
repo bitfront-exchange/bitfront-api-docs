@@ -7,7 +7,7 @@ All users who want to use the API must comply with the policy.
 
 To use BITBOX API, you must have your own API KEY and API SECRET.
 
-  - To gain an API KEY and an API SECRET, you must sign up to [BITBOX](http://bitbox.me). See [Prerequisites](1_Overview.md#prerequisites) for details.
+  - To gain an API KEY and an API SECRET, you must sign up to [BITBOX](http://bitbox.me). See [Prerequisites](/1_Overview.md#prerequisites) for details.
   - API KEYs and API SECRETs are case sensitive.
 
 > **Note**

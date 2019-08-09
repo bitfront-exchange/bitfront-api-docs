@@ -80,7 +80,7 @@
 
 <td>
 
-조회할 [coin pair](../../5_Terms.md#coin-pair). [Currency](../../5_Terms.md#currency-for-coin-trading)와 [Market](../../5_Terms.md#market-for-coin-trading)을 점('.')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
+조회할 [coin pair](/5_Terms.md#coin-pair). [Currency](/5_Terms.md#currency-for-coin-trading)와 [Market](/5_Terms.md#market-for-coin-trading)을 점('.')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
 예를 들어 "BCH.ETH"은 ETH으로 BCH를 거래한다는 의미입니다.
 
 </td>
@@ -213,7 +213,7 @@
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `coinPair` |  조회할 [coin pair](../../5_Terms.md#coin-pair). [Currency](../../5_Terms.md#currency-for-coin-trading)와 [Market](../../5_Terms.md#market-for-coin-trading)을 점(\'.\')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
+|---|---|---|---|---|| `coinPair` |  조회할 [coin pair](/5_Terms.md#coin-pair). [Currency](/5_Terms.md#currency-for-coin-trading)와 [Market](/5_Terms.md#market-for-coin-trading)을 점(\'.\')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
 예를 들어 \"BCH.ETH\"은 ETH으로 BCH를 거래한다는 의미입니다. | <span class="nowrap">String</span> | query |     || `startTime` |  조회할 거래 내역의 처음 시각. 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다. | <span class="nowrap">Integer</span> | query |     || `endTime` |  조회할 거래 내역의 마지막 시각. 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다. | <span class="nowrap">Integer</span> | query |     || `max` |  조회할 거래 내역 최대 개수. 1\~100 사이여야 하며 기본값은 100입니다.<br/>
 최근 3개월 이내의 내역만 제공하므로 실제 반환되는 개수는 `max`보다 적을 수 있습니다. | <span class="nowrap">Integer</span> | query |     | -->
 
@@ -321,7 +321,7 @@ O
 
 <td>
 
-결과 상태 코드. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -349,7 +349,7 @@ O
 
 <td>
 
-결과의 상세 메시지. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -497,7 +497,7 @@ Long
 
 <td>
 
-[Market](../../5_Terms.md#market-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code)
+[Market](/5_Terms.md#market-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)
 
 </td>
 
@@ -525,7 +525,7 @@ String
 
 <td>
 
-[Currency](../../5_Terms.md#currency-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code)
+[Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)
 
 </td>
 

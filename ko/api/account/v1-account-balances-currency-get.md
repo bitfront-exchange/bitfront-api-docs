@@ -74,7 +74,7 @@
 
 <td>
 
-잔액을 확인할 [Currency](../../5_Terms.md#currency-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code).<br/>
+잔액을 확인할 [Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code).<br/>
 예를 들어 비트코인 캐시는 "BCH"가 됩니다.
 
 </td>
@@ -104,7 +104,7 @@ O
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `currency` |  잔액을 확인할 [Currency](../../5_Terms.md#currency-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code).<br/>
+|---|---|---|---|---|| `currency` |  잔액을 확인할 [Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code).<br/>
 예를 들어 비트코인 캐시는 \"BCH\"가 됩니다. | <span class="nowrap">String</span> | path |  O  | -->
 
 ## Response
@@ -211,7 +211,7 @@ O
 
 <td>
 
-결과 상태 코드. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -239,7 +239,7 @@ O
 
 <td>
 
-결과의 상세 메시지. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -350,7 +350,7 @@ O
 
 <td>
 
-[Currency](../../5_Terms.md#currency-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code)
+[Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)
 
 </td>
 

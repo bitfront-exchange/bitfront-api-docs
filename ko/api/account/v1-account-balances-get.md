@@ -114,7 +114,7 @@ O
 
 <td>
 
-결과 상태 코드. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -142,7 +142,7 @@ O
 
 <td>
 
-결과의 상세 메시지. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -195,7 +195,7 @@ O
   - Type:  array
     </p>
 
-[balance](#balance)
+[balance](#balance-1)
 객체의 배열입니다.
 
 ### balance
@@ -261,7 +261,7 @@ O
 
 <td>
 
-[Currency](../../5_Terms.md#currency-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code)
+[Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)
 
 </td>
 

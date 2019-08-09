@@ -1,6 +1,6 @@
 # Open orders
 
-지정한 [currency](../../5_Terms.md#currency-for-coin-trading)와 [market](../../5_Terms.md#market-for-coin-trading)의 열린 주문을 모두 조회합니다. 파라미터 `max` 개수만큼 반환하며, `max`를 지정하지 않으면 최대 100개만 반환합니다. 조회된 주문은 주문 날짜 기준 내림차순으로 정렬됩니다.<br/>
+지정한 [currency](/5_Terms.md#currency-for-coin-trading)와 [market](/5_Terms.md#market-for-coin-trading)의 열린 주문을 모두 조회합니다. 파라미터 `max` 개수만큼 반환하며, `max`를 지정하지 않으면 최대 100개만 반환합니다. 조회된 주문은 주문 날짜 기준 내림차순으로 정렬됩니다.<br/>
 
 > **Note**<br/>
 > 필수로 표기된 파라미터는 없지만, `market`과 `currency` 파라미터 중 하나는 반드시 입력해야 합니다.
@@ -77,7 +77,7 @@
 
 <td>
 
-조회할 [Market](../../5_Terms.md#market-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code).<br/>
+조회할 [Market](/5_Terms.md#market-for-coin-trading)의 [coin code](/5_Terms.md#coin-code).<br/>
 예를 들어 비트코인 캐시는 "BCH"가 됩니다.
 
 </td>
@@ -112,7 +112,7 @@
 
 <td>
 
-조회할 [Currency](../../5_Terms.md#currency-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code).<br/>
+조회할 [Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code).<br/>
 예를 들어 이더리움은 "ETH"가 됩니다.
 
 </td>
@@ -176,8 +176,8 @@
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `market` |  조회할 [Market](../../5_Terms.md#market-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code).<br/>
-예를 들어 비트코인 캐시는 \"BCH\"가 됩니다. | <span class="nowrap">String</span> | query |     || `currency` |  조회할 [Currency](../../5_Terms.md#currency-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code).<br/>
+|---|---|---|---|---|| `market` |  조회할 [Market](/5_Terms.md#market-for-coin-trading)의 [coin code](/5_Terms.md#coin-code).<br/>
+예를 들어 비트코인 캐시는 \"BCH\"가 됩니다. | <span class="nowrap">String</span> | query |     || `currency` |  조회할 [Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code).<br/>
 예를 들어 이더리움은 \"ETH\"가 됩니다. | <span class="nowrap">String</span> | query |     || `max` |  조회할 열린 주문의 총 개수. 1에서 100까지 입력할 수 있습니다. 기본값은 100입니다. | <span class="nowrap">Integer</span> | query |     | -->
 
 ## Response
@@ -284,7 +284,7 @@ O
 
 <td>
 
-결과 상태 코드. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -312,7 +312,7 @@ O
 
 <td>
 
-결과의 상세 메시지. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -459,7 +459,7 @@ Long
 
 <td>
 
-[Market](../../5_Terms.md#market-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code)
+[Market](/5_Terms.md#market-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)
 
 </td>
 
@@ -487,7 +487,7 @@ String
 
 <td>
 
-[Currency](../../5_Terms.md#currency-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code)
+[Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)
 
 </td>
 
@@ -636,7 +636,7 @@ Double
 \- "CREATE": 주문이 생성됨<br/>
 \- "REQUEST": 주문이 주문장에 요청됨<br/>
 \- "PROCESS": 주문이 부분적으로 취소되거나 체결됨<br/>
-\- "COMPLETE": 주문이 [완료](../../5_Terms.md#completed-order)됨 (취소된 것도 포함).
+\- "COMPLETE": 주문이 [완료](/5_Terms.md#completed-order)됨 (취소된 것도 포함).
 
 </td>
 
@@ -693,7 +693,7 @@ Long
 
 <td>
 
-주문이 [완료](../../5_Terms.md#completed-order)된 시각.<br/>
+주문이 [완료](/5_Terms.md#completed-order)된 시각.<br/>
 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다.<br/>
 주문이 완료되지 않았다면 이 값은 0입니다.
 

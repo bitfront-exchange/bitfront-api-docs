@@ -79,7 +79,7 @@ The tick values include bid, ask, last prices, 24 hour volume, and others.<br/>
 <td>
 
 The target cryptocurrencies.<br/>
-A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by '.'.<br/>
+A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by '.'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH.
 
 </td>
@@ -110,7 +110,7 @@ O
 
 <!-- | Name | Description | Type | Loc. | Required |
 |---|---|---|---|---|| `coinPair` |  The target cryptocurrencies.<br/>
-A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by \'.\'.<br/>
+A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by \'.\'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH. | <span class="nowrap">String</span> | query |  O  | -->
 
 ## Response
@@ -218,7 +218,7 @@ O
 
 <td>
 
-The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -246,7 +246,7 @@ O
 
 <td>
 
-The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 

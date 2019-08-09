@@ -1,24 +1,20 @@
-# Order information (Deprecated)
+# Order information v2
 
-> **Deprecated**
-> 
-> This API is available only until Q3 of 2019. [Order information API v2(`/v2/account/orders/orderID`)](/api/account/v2-account-orders-orderID-get.md#order-information-v2)) should be used instead.
-
-Gets the detailed information of a single order.<br/>
-You can check whether the order has been cancelled by using the following formula:<br/>
-`filledAmount` + `remainAmount` \< `initialRequestAmount`.<br/>
+한 주문의 상세 정보를 가져옵니다.<br/>
+다음 식을 사용하여 이 주문이 취소되었는지 확인할 수 있습니다.<br/>
+`filledAmount` + `remainAmount` \< `initialRequestAmount`
 
 <ul>
 
 <li>
 
-If `filledAmount` + `remainAmount` \< `initialRequestAmount`,<br/> it means `initialRequestAmount` - (`filledAmount` + `remainAmount`) has been cancelled.
+`filledAmount` + `remainAmount` \< `initialRequestAmount`이면,<br/> `initialRequestAmount` - (`filledAmount` + `remainAmount`) 만큼 취소되었다는 의미입니다.
 
 </li>
 
 <li>
 
-If `filledAmount` + `remainAmount` = `initialRequestAmount`,<br/> nothing has been cancelled.
+`filledAmount` + `remainAmount` = `initialRequestAmount`이면,<br/> 취소된 것이 없다는 의미입니다.
 
 </li>
 
@@ -27,11 +23,11 @@ If `filledAmount` + `remainAmount` = `initialRequestAmount`,<br/> nothing has be
 <br/>
 
 > **Note**<br/>
-> This API returns "LINK" in the `currency` field when Currency of the order is LINK.
+> 이 API는, 조회한 주문의 Currency가 LINK이면 응답의 `currency` 필드에 티커 심볼인 "LN"을 반환합니다.
 
 ## Endpoint URI
 
-    GET https://openapi.bitbox.me/v1/account/orders/{orderID}
+    GET https://openapi.bitbox.me/v2/account/orders/{orderID}
 
 ## Request parameters
 
@@ -101,7 +97,7 @@ If `filledAmount` + `remainAmount` = `initialRequestAmount`,<br/> nothing has be
 
 <td>
 
-The ID of the order to get. You can get the ID whenever you place an order or retrieve your order list.
+가져올 주문의 ID. 주문 ID는 주문을 요청하거나 요청 목록을 가져올 때 확인할 수 있습니다.
 
 </td>
 
@@ -130,7 +126,7 @@ O
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `orderID` |  The ID of the order to get. You can get the ID whenever you place an order or retrieve your order list. | <span class="nowrap">Long</span> | path |  O  | -->
+|---|---|---|---|---|| `orderID` |  가져올 주문의 ID. 주문 ID는 주문을 요청하거나 요청 목록을 가져올 때 확인할 수 있습니다. | <span class="nowrap">Long</span> | path |  O  | -->
 
 ## Response
 
@@ -180,7 +176,7 @@ O
 
 <td>
 
-The time standard for the `responseTime`. It is always "UTC".
+`responseTime`의 기준 시간. 항상 "UTC"입니다.
 
 </td>
 
@@ -208,8 +204,7 @@ O
 
 <td>
 
-The time when responded.<br/>
-It is a timestamp in milliseconds since Unix Epoch in UTC.
+응답 시간. 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다.
 
 </td>
 
@@ -237,7 +232,7 @@ O
 
 <td>
 
-The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
+결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -265,7 +260,7 @@ O
 
 <td>
 
-The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
+결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -293,7 +288,7 @@ O
 
 <td>
 
-See the reference object.
+대상 객체 설명을 참고하십시오.
 
 </td>
 
@@ -376,7 +371,7 @@ See the reference object.
 
 <td>
 
-The ID of the order
+주문의 ID
 
 </td>
 
@@ -404,7 +399,7 @@ Long
 
 <td>
 
-A [coin code](/5_Terms.md#coin-code) of the [Market](/5_Terms.md#market-for-coin-trading)
+[Market](/5_Terms.md#market-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)
 
 </td>
 
@@ -432,7 +427,7 @@ String
 
 <td>
 
-A [coin code](/5_Terms.md#coin-code) of the [Currency](/5_Terms.md#currency-for-coin-trading)
+[Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)
 
 </td>
 
@@ -460,7 +455,7 @@ String
 
 <td>
 
-A type of the order. It is one of the following:<br/>
+주문 타입. 다음 중 하나입니다.<br/>
 \- "MARKET": Market order<br/>
 \- "LIMIT": Limit order
 
@@ -490,9 +485,9 @@ String
 
 <td>
 
-A side of the order. It is one of the following:<br/>
-\- "BUY": buy side<br/>
-\- "SELL": sell side
+주문 방향. 다음 중 하나입니다.<br/>
+\- "BUY": 사기<br/>
+\- "SELL": 팔기
 
 </td>
 
@@ -520,7 +515,7 @@ String
 
 <td>
 
-The limit price when `orderType` is "LIMIT"
+`orderType`이 "LIMIT"일 때 제한 가격
 
 </td>
 
@@ -548,7 +543,7 @@ Double
 
 <td>
 
-The amount requested for the first time
+처음 요청한 총수량
 
 </td>
 
@@ -576,7 +571,7 @@ Double
 
 <td>
 
-The amount after cancellation
+취소한 후의 총수량
 
 </td>
 
@@ -604,7 +599,7 @@ Double
 
 <td>
 
-The amount that are not filled or cancelled
+체결되지도 않고 취소되지도 않은 총수량
 
 </td>
 
@@ -632,7 +627,7 @@ Double
 
 <td>
 
-The amount filled
+체결된 총수량
 
 </td>
 
@@ -660,10 +655,12 @@ Double
 
 <td>
 
-The reserved value for the order.<br/>
-For example, in "XRP" Currency and "BTC" Market,<br/>
-\- When `orderSide` is "BUY", `reservedValue` in BTC is `requestAmount` \* `price` \* (1 + *fee rate*).<br/>
-\- When `orderSide` is "SELL", `reservedValue` in XRP is `requestAmount`.
+주문의 예상 가치.<br/>
+예를 들어 `currency`가 "XRP", `market`이 "BTC"일 때,<br/>
+\- `orderSide`가 "BUY"이면, `reservedValue`는 BTC로<br/>
+`requestAmount` \* `price` \* (1 + *fee rate*)입니다.<br/>
+\- `orderSide`가 "SELL"이면, `reservedValue`는 XRP로<br/>
+`requestAmount`입니다.
 
 </td>
 
@@ -691,10 +688,12 @@ Double
 
 <td>
 
-The reserved value for the remaining amount of the order.<br/>
-For example, in "XRP" Currency and "BTC" Market,<br/>
-\- When `orderSide` is "BUY", `reserveRemainingValue` in BTC is `remainAmount` \* `price` \* (1 + *fee rate*).<br/>
-\- When `orderSide` is "SELL", `reserveRemainingValue` in XRP is `remainAmount`.
+주문 내 남은 총수량 예상 가치.<br/>
+예를 들어 `currency`가 "XRP", `market`이 "BTC"일 때,<br/>
+\- `orderSide`가 "BUY"이면, `reserveRemainingValue`는 BTC로<br/>
+`remainAmount` \* `price` \* (1 + *fee rate*)입니다.<br/>
+\- `orderSide`가 "SELL"이면, `reserveRemainingValue`는 XRP로<br/>
+`remainAmount`입니다.
 
 </td>
 
@@ -722,8 +721,8 @@ Double
 
 <td>
 
-Fee rate for a [Maker](/5_Terms.md#maker) order.<br/>
-Fee rate is not an absolute value. i. e. If the value is 0.001, this indicates that the fee rate is 0.1%.
+[Maker](/5_Terms.md#maker) 주문에 대한 수수료 비율.<br/>
+수수료는 절대값이 아닙니다. 예를 들어 이 값이 0.001이면 수수료 비율이 0.1%라는 의미입니다.
 
 </td>
 
@@ -751,8 +750,8 @@ Double
 
 <td>
 
-Fee rate for a [Taker](/5_Terms.md#taker) order.<br/>
-Fee rate is not an absolute value. i. e. If the value is 0.001, this indicates that the fee rate is 0.1%.
+[Taker](/5_Terms.md#taker) 주문에 대한 수수료 비율.<br/>
+수수료는 절대값이 아닙니다. 예를 들어 이 값이 0.001이면 수수료 비율이 0.1%라는 의미입니다.
 
 </td>
 
@@ -774,14 +773,14 @@ Double
 
 <td>
 
-`enableLinkFee`
+`enableLnFee`
 
 </td>
 
 <td>
 
-Whether to pay the fee with LINK.<br/>
-Refer to the [Transaction fees](https://www.bitbox.me/fees/) for further information on how to pay the transaction fee with LINK.
+LN으로 거래 수수료 결제 여부.<br/>
+LN으로 거래 수수료를 결제하는 방법에 관한 상세한 설명은 [Transaction fees](https://www.bitbox.me/fees/)를 참고하십시오.
 
 </td>
 
@@ -803,14 +802,14 @@ Boolean
 
 <td>
 
-`makerLinkFeeRate`
+`makerLnFeeRate`
 
 </td>
 
 <td>
 
-Fee rate for a [Maker](/5_Terms.md#maker) order when paying fees with LINK.<br/>
-If `enableLinkFee` is set as false, this value is '0'.
+LN으로 거래 수수료 결제 시 [Maker](/5_Terms.md#maker) 주문에 대한 수수료 비율.<br/>
+`enableLnFee`가 false이면 이 값은 0입니다.
 
 </td>
 
@@ -832,14 +831,14 @@ Double
 
 <td>
 
-`takerLinkFeeRate`
+`takerLnFeeRate`
 
 </td>
 
 <td>
 
-Fee rate for a [Taker](/5_Terms.md#taker) order when paying fees with LINK.<br/>
-If `enableLinkFee` is set as false, this value is '0'.
+LN로 거래 수수료 결제 시 [Taker](/5_Terms.md#taker) 주문에 대한 수수료 비율.<br/>
+`enableLnFee`가 false이면 이 값은 0입니다.
 
 </td>
 
@@ -867,11 +866,11 @@ Double
 
 <td>
 
-the status of the order. It is one of the following:<br/>
-\- "CREATE": The order is created.<br/>
-\- "REQUEST": The order is registered to the order book.<br/>
-\- "PROCESS": The order is partially cancelled or filled.<br/>
-\- "COMPLETE": The order is [completed](/5_Terms.md#completed-order) (including cancellation).
+주문의 상태. 다음 중 하나입니다.<br/>
+\- "CREATE": 주문이 생성됨<br/>
+\- "REQUEST": 주문이 주문장에 요청됨<br/>
+\- "PROCESS": 주문이 부분적으로 취소되거나 체결됨<br/>
+\- "COMPLETE": 주문이 [완료](/5_Terms.md#completed-order)됨 (취소된 것도 포함).
 
 </td>
 
@@ -899,7 +898,7 @@ String
 
 <td>
 
-The time when the transaction is created. It is a timestamp in milliseconds since Unix Epoch in UTC.
+트랜잭션 생성 시각. 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다.
 
 </td>
 
@@ -927,9 +926,9 @@ Long
 
 <td>
 
-The time when the order is [completed](/5_Terms.md#completed-order).<br/>
-It is a timestamp in milliseconds since Unix Epoch in UTC.<br/>
-If the order is not yet completed, it is 0.
+주문이 [완료](/5_Terms.md#completed-order)된 시각.<br/>
+밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다.<br/>
+주문이 완료되지 않았다면 이 값은 0입니다.
 
 </td>
 
@@ -957,7 +956,7 @@ Long
 
 <td>
 
-The average price of filled amount
+체결된 총수량의 평균 가격
 
 </td>
 
@@ -983,33 +982,33 @@ Double
 
 ``` json
 {
-    "timezone": "UTC",
-    "responseTime": 1530167599398,
-    "statusCode": 1000,
-    "statusMessage": "SUCCESS",
-    "responseData": {
-        "orderID": 10100000042564,
-        "market": "ETH",
-        "currency": "XRP",
-        "orderType": "LIMIT",
-        "orderSide": "BUY",
-        "price": 0.00100915,
-        "initialRequestAmount": 200,
-        "requestAmount": 200,
-        "remainAmount": 0,
-        "filledAmount": 200,
-        "reservedValue": 0.222013,
-        "reserveRemainingValue": 0,
-        "makerFeeRate": 0.001,
-        "takerFeeRate": 0.001,
-        "enableLinkFee": false,
-        "makerLinkFeeRate": 0,
-        "takerLinkFeeRate": 0,
-        "status": "COMPLETE",
-        "createdAt": 1528998406713,
-        "completedAt": 1528998406907,
-        "averageFillPrice": 0.00100915
-    }
+   "timezone": "UTC",
+   "responseTime": 1530167599398,
+   "statusCode": 1000,
+   "statusMessage": "SUCCESS",
+   "responseData": {
+       "orderID": 10100000042564,
+       "market": "ETH",
+       "currency": "XRP",
+       "orderType": "LIMIT",
+       "orderSide": "BUY",
+       "price": 0.00100915,
+       "initialRequestAmount": 200,
+       "requestAmount": 200,
+       "remainAmount": 0,
+       "filledAmount": 200,
+       "reservedValue": 0.222013,
+       "reserveRemainingValue": 0,
+       "makerFeeRate": 0.001,
+       "takerFeeRate": 0.001,
+       "enableLnFee": false,
+       "makerLnFeeRate": 0,
+       "takerLnFeeRate": 0,
+       "status": "COMPLETE",
+       "createdAt": 1528998406713,
+       "completedAt": 1528998406907,
+       "averageFillPrice": 0.00100915
+   }
 }
 ```
 

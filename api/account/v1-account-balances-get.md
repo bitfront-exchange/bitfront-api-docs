@@ -115,7 +115,7 @@ O
 
 <td>
 
-The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -143,7 +143,7 @@ O
 
 <td>
 
-The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -196,7 +196,7 @@ See the reference object.
   - Type:  array
     </p>
 
-Array of [balance](#balance)
+Array of [balance](#balance-1)
 
 ### balance
 
@@ -261,7 +261,7 @@ Array of [balance](#balance)
 
 <td>
 
-A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading)
+A [coin code](/5_Terms.md#coin-code) of the [Currency](/5_Terms.md#currency-for-coin-trading)
 
 </td>
 

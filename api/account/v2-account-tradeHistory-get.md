@@ -6,7 +6,7 @@ You can set the conditions through the query parameters. See the parameter descr
 > **Note**<br/>
 > \- The maximum period for the date condition is 30 days. In other words, the number of days from `startTime` to `endTime` MUST NOT exceed 30.<br/>
 > \- The result records will be stored in `responseData` and sorted in descending order of `responseData[].createAt`.<br/>
-> \- This API is allowed just 1 RPS regardless of the general rule on [RPS limit policy](../../2_Authentication_and_Security_Policy.md#rps-limit-policy).
+> \- This API is allowed just 1 RPS regardless of the general rule on [RPS limit policy](/2_Authentication_and_Security_Policy.md#rps-limit-policy).
 
 ## Endpoint URI
 
@@ -81,7 +81,7 @@ You can set the conditions through the query parameters. See the parameter descr
 <td>
 
 The cryptocurrencies for the trades to retrieve.<br/>
-A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by '.'.<br/>
+A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by '.'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH.<br/>
 If it is empty, this API will return all coin pair trades.
 
@@ -217,7 +217,7 @@ Note that the returned records can be less than `max` because the API returns on
 
 <!-- | Name | Description | Type | Loc. | Required |
 |---|---|---|---|---|| `coinPair` |  The cryptocurrencies for the trades to retrieve.<br/>
-A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by \'.\'.<br/>
+A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by \'.\'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH.<br/>
 If it is empty, this API will return all coin pair trades. | <span class="nowrap">String</span> | query |     || `startTime` |  The start time of the period condition for retrieving trade records. It is a timestamp in milliseconds since Unix Epoch in UTC. | <span class="nowrap">Integer</span> | query |  O  || `endTime` |  The end time of the period condition for retrieving trade records. It is a timestamp in milliseconds since Unix Epoch in UTC.<br/>
 If unassigned, the default value of `startTime`+24hrs is used. | <span class="nowrap">Integer</span> | query |     || `max` |  The maximum number of trades to retrieve. It should be in the range of 1-100. The default is 100.<br/>
@@ -328,7 +328,7 @@ O
 
 <td>
 
-The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -356,7 +356,7 @@ O
 
 <td>
 
-The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -531,7 +531,7 @@ Long
 
 <td>
 
-A [coin code](../../5_Terms.md#coin-code) of the [Market](../../5_Terms.md#market-for-coin-trading)
+A [coin code](/5_Terms.md#coin-code) of the [Market](/5_Terms.md#market-for-coin-trading)
 
 </td>
 
@@ -559,7 +559,7 @@ String
 
 <td>
 
-A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading)
+A [coin code](/5_Terms.md#coin-code) of the [Currency](/5_Terms.md#currency-for-coin-trading)
 
 </td>
 

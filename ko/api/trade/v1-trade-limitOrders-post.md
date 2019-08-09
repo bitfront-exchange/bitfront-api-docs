@@ -75,8 +75,8 @@
 
 <td>
 
-주문할 [coin pair](../../5_Terms.md#coin-pair).<br/>
-[Currency](../../5_Terms.md#currency-for-coin-trading)와 [Market](../../5_Terms.md#market-for-coin-trading)을 점('.')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
+주문할 [coin pair](/5_Terms.md#coin-pair).<br/>
+[Currency](/5_Terms.md#currency-for-coin-trading)와 [Market](/5_Terms.md#market-for-coin-trading)을 점('.')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
 예를 들어 "BCH.ETH"은 ETH으로 BCH를 거래한다는 의미입니다.
 
 </td>
@@ -210,8 +210,8 @@ O
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `coinPair` |  주문할 [coin pair](../../5_Terms.md#coin-pair).<br/>
-[Currency](../../5_Terms.md#currency-for-coin-trading)와 [Market](../../5_Terms.md#market-for-coin-trading)을 점(\'.\')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
+|---|---|---|---|---|| `coinPair` |  주문할 [coin pair](/5_Terms.md#coin-pair).<br/>
+[Currency](/5_Terms.md#currency-for-coin-trading)와 [Market](/5_Terms.md#market-for-coin-trading)을 점(\'.\')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
 예를 들어 \"BCH.ETH\"은 ETH으로 BCH를 거래한다는 의미입니다. | <span class="nowrap">String</span> | body |  O  || `quantity` |  주문할 최대 혹은 최소 양. 0보다 커야 합니다. | <span class="nowrap">Double</span> | body |  O  || `price` |  주문할 최고가 혹은 최저가. 0보다 커야 합니다. | <span class="nowrap">Double</span> | body |  O  || `orderSide` |  주문 방향. 다음 중 하나여야 합니다.<br/>
 - \"BUY\": 사기<br/>
 - \"SELL\": 팔기 | <span class="nowrap">String</span> | body |  O  | -->
@@ -320,7 +320,7 @@ O
 
 <td>
 
-결과 상태 코드. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -348,7 +348,7 @@ O
 
 <td>
 
-결과의 상세 메시지. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 

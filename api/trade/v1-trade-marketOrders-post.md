@@ -75,7 +75,7 @@ You can set the conditions through the query parameters. See the parameter descr
 
 <td>
 
-A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by '.'.<br/>
+A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by '.'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH.
 
 </td>
@@ -175,7 +175,7 @@ O
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `coinPair` |  A case-sensitive string literal for the [Currency](../../5_Terms.md#currency-for-coin-trading) and the [Market](../../5_Terms.md#market-for-coin-trading) separated by \'.\'.<br/>
+|---|---|---|---|---|| `coinPair` |  A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by \'.\'.<br/>
 For example, BCH.ETH means buying or selling BCH with ETH. | <span class="nowrap">String</span> | body |  O  || `quantity` |  The maximum or minimum quantity to order. It should be greater than 0. | <span class="nowrap">Double</span> | body |  O  || `orderSide` |  The side of order. It should be one of the following:<br/>
 - \"BUY\": buy order<br/>
 - \"SELL\": sell order | <span class="nowrap">String</span> | body |  O  | -->
@@ -285,7 +285,7 @@ O
 
 <td>
 
-The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -313,7 +313,7 @@ O
 
 <td>
 
-The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 

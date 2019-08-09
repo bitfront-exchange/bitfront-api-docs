@@ -77,7 +77,7 @@ Retrieves all your open orders for the given currency or market. Open orders wil
 
 <td>
 
-A [coin code](../../5_Terms.md#coin-code) of the [Market](../../5_Terms.md#market-for-coin-trading).<br/>
+A [coin code](/5_Terms.md#coin-code) of the [Market](/5_Terms.md#market-for-coin-trading).<br/>
 For example, BCH for Bitcoin Cash.
 
 </td>
@@ -112,7 +112,7 @@ For example, BCH for Bitcoin Cash.
 
 <td>
 
-A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading).<br/>
+A [coin code](/5_Terms.md#coin-code) of the [Currency](/5_Terms.md#currency-for-coin-trading).<br/>
 For example, ETH for Ethereum.
 
 </td>
@@ -176,8 +176,8 @@ Total number of open orders to retrieve. You can enter between 1 and 100. The de
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `market` |  A [coin code](../../5_Terms.md#coin-code) of the [Market](../../5_Terms.md#market-for-coin-trading).<br/>
-For example, BCH for Bitcoin Cash. | <span class="nowrap">String</span> | query |     || `currency` |  A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading).<br/>
+|---|---|---|---|---|| `market` |  A [coin code](/5_Terms.md#coin-code) of the [Market](/5_Terms.md#market-for-coin-trading).<br/>
+For example, BCH for Bitcoin Cash. | <span class="nowrap">String</span> | query |     || `currency` |  A [coin code](/5_Terms.md#coin-code) of the [Currency](/5_Terms.md#currency-for-coin-trading).<br/>
 For example, ETH for Ethereum. | <span class="nowrap">String</span> | query |     || `max` |  Total number of open orders to retrieve. You can enter between 1 and 100. The default is 100. | <span class="nowrap">Integer</span> | query |     | -->
 
 ## Response
@@ -285,7 +285,7 @@ O
 
 <td>
 
-The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -313,7 +313,7 @@ O
 
 <td>
 
-The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -459,7 +459,7 @@ Long
 
 <td>
 
-A [coin code](../../5_Terms.md#coin-code) of the [Market](../../5_Terms.md#market-for-coin-trading)
+A [coin code](/5_Terms.md#coin-code) of the [Market](/5_Terms.md#market-for-coin-trading)
 
 </td>
 
@@ -487,7 +487,7 @@ String
 
 <td>
 
-A [coin code](../../5_Terms.md#coin-code) of the [Currency](../../5_Terms.md#currency-for-coin-trading)
+A [coin code](/5_Terms.md#coin-code) of the [Currency](/5_Terms.md#currency-for-coin-trading)
 
 </td>
 
@@ -633,7 +633,7 @@ The status of the open order. It is one of the following:<br/>
 \- "CREATE": The order is created.<br/>
 \- "REQUEST": The order is requested to the order book.<br/>
 \- "PROCESS": The order is partially or fully canceled.<br/>
-\- "COMPLETE": The order is [completed](../../5_Terms.md#completed-order). (including cancellation)
+\- "COMPLETE": The order is [completed](/5_Terms.md#completed-order). (including cancellation)
 
 </td>
 
@@ -690,7 +690,7 @@ Long
 
 <td>
 
-The time when the order is [completed](../../5_Terms.md#completed-order). It is in milliseconds since Unix Epoch in UTC.<br/>
+The time when the order is [completed](/5_Terms.md#completed-order). It is in milliseconds since Unix Epoch in UTC.<br/>
 If the order is not yet completed, it is 0.
 
 </td>

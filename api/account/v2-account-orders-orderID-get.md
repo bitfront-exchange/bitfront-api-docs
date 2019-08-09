@@ -1,8 +1,4 @@
-# Order information (Deprecated)
-
-> **Deprecated**
-> 
-> This API is available only until Q3 of 2019. [Order information API v2(`/v2/account/orders/orderID`)](/api/account/v2-account-orders-orderID-get.md#order-information-v2)) should be used instead.
+# Order information v2
 
 Gets the detailed information of a single order.<br/>
 You can check whether the order has been cancelled by using the following formula:<br/>
@@ -27,11 +23,11 @@ If `filledAmount` + `remainAmount` = `initialRequestAmount`,<br/> nothing has be
 <br/>
 
 > **Note**<br/>
-> This API returns "LINK" in the `currency` field when Currency of the order is LINK.
+> This API returns "LN", LINK's ticker symbol, in the `currency` field when Currency of the order is LINK.
 
 ## Endpoint URI
 
-    GET https://openapi.bitbox.me/v1/account/orders/{orderID}
+    GET https://openapi.bitbox.me/v2/account/orders/{orderID}
 
 ## Request parameters
 
@@ -774,14 +770,14 @@ Double
 
 <td>
 
-`enableLinkFee`
+`enableLnFee`
 
 </td>
 
 <td>
 
-Whether to pay the fee with LINK.<br/>
-Refer to the [Transaction fees](https://www.bitbox.me/fees/) for further information on how to pay the transaction fee with LINK.
+Whether to pay the fee with LN.<br/>
+Refer to the [Transaction fees](https://www.bitbox.me/fees/) for further information on how to pay the transaction fee with LN.
 
 </td>
 
@@ -803,14 +799,14 @@ Boolean
 
 <td>
 
-`makerLinkFeeRate`
+`makerLnFeeRate`
 
 </td>
 
 <td>
 
-Fee rate for a [Maker](/5_Terms.md#maker) order when paying fees with LINK.<br/>
-If `enableLinkFee` is set as false, this value is '0'.
+Fee rate for a [Maker](/5_Terms.md#maker) order when paying fees with LN.<br/>
+If `enableLnFee` is set as false, this value is '0'.
 
 </td>
 
@@ -832,14 +828,14 @@ Double
 
 <td>
 
-`takerLinkFeeRate`
+`takerLnFeeRate`
 
 </td>
 
 <td>
 
-Fee rate for a [Taker](/5_Terms.md#taker) order when paying fees with LINK.<br/>
-If `enableLinkFee` is set as false, this value is '0'.
+Fee rate for a [Taker](/5_Terms.md#taker) order when paying fees with LN.<br/>
+If `enableLnFee` is set as false, this value is '0'.
 
 </td>
 
@@ -1002,9 +998,9 @@ Double
         "reserveRemainingValue": 0,
         "makerFeeRate": 0.001,
         "takerFeeRate": 0.001,
-        "enableLinkFee": false,
-        "makerLinkFeeRate": 0,
-        "takerLinkFeeRate": 0,
+        "enableLnFee": false,
+        "makerLnFeeRate": 0,
+        "takerLnFeeRate": 0,
         "status": "COMPLETE",
         "createdAt": 1528998406713,
         "completedAt": 1528998406907,

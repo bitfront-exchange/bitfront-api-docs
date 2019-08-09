@@ -76,7 +76,7 @@
 
 <td>
 
-[Currency](../../5_Terms.md#currency-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code).<br/>
+[Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code).<br/>
 예를 들어 비트코인 캐시는 "BCH"가 됩니다.
 
 </td>
@@ -283,7 +283,7 @@
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `currency` |  [Currency](../../5_Terms.md#currency-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code).<br/>
+|---|---|---|---|---|| `currency` |  [Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code).<br/>
 예를 들어 비트코인 캐시는 \"BCH\"가 됩니다. | <span class="nowrap">String</span> | query |     || `startTime` |  조회할 거래 내역의 처음 시각. 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다. | <span class="nowrap">Long</span> | query |     || `endTime` |  조회할 거래 내역의 마지막 시각. 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다. | <span class="nowrap">Long</span> | query |     || `transferType` |  전송 방식. 다음 중 하나이거나 생략해야 합니다.<br/>
 - \"WITHDRAW\": 출금한 내역만 가져옴<br/>
 - \"DEPOSIT\": 입금한 내역만 가져옴<br/>
@@ -397,7 +397,7 @@ O
 
 <td>
 
-결과 상태 코드. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -425,7 +425,7 @@ O
 
 <td>
 
-결과의 상세 메시지. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -902,7 +902,7 @@ Long
 
 <td>
 
-전송한 암호화폐의 [coin code](../../5_Terms.md#coin-code)
+전송한 암호화폐의 [coin code](/5_Terms.md#coin-code)
 
 </td>
 

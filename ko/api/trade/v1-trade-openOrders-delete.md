@@ -1,10 +1,10 @@
 # Cancellation of all open orders
 
-지정한 [coin pair](../../5_Terms.md#coin-pair)의 열린 주문 전체를 취소하라고 요청합니다. 취소 요청된 주문 ID 목록을 반환합니다.<br/>
+지정한 [coin pair](/5_Terms.md#coin-pair)의 열린 주문 전체를 취소하라고 요청합니다. 취소 요청된 주문 ID 목록을 반환합니다.<br/>
 각 주문에 대해, 주문이 부분 체결되었으면 남은 부분만 취소하려고 시도합니다.<br/>
 
 > **Caution**<br/>
-> `statusCode`가 1000이라는 것은 취소 요청이 잘 전해졌다는 뜻이며 성공적으로 취소되었다는 뜻이 아닙니다. 주문이 취소되었는지 확인하려면 [`/v1/account/orders/{orderID}`](../account/v1-account-orders-orderID-get.md#order-information)를 사용하십시오.
+> `statusCode`가 1000이라는 것은 취소 요청이 잘 전해졌다는 뜻이며 성공적으로 취소되었다는 뜻이 아닙니다. 주문이 취소되었는지 확인하려면 [`/v2/account/orders/{orderID}`](/api/account/v2-account-orders-orderID-get.md#order-information-v2)를 사용하십시오.
 
 ## Endpoint URI
 
@@ -78,7 +78,7 @@
 
 <td>
 
-취소 요청할 [coin pair](../../5_Terms.md#coin-pair). [Currency](../../5_Terms.md#currency-for-coin-trading)와 [Market](../../5_Terms.md#market-for-coin-trading)을 점('.')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
+취소 요청할 [coin pair](/5_Terms.md#coin-pair). [Currency](/5_Terms.md#currency-for-coin-trading)와 [Market](/5_Terms.md#market-for-coin-trading)을 점('.')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
 예를 들어 "BCH.ETH"은 ETH으로 BCH를 거래한다는 의미입니다.
 
 </td>
@@ -108,7 +108,7 @@ O
 </table>
 
 <!-- | Name | Description | Type | Loc. | Required |
-|---|---|---|---|---|| `coinPair` |  취소 요청할 [coin pair](../../5_Terms.md#coin-pair). [Currency](../../5_Terms.md#currency-for-coin-trading)와 [Market](../../5_Terms.md#market-for-coin-trading)을 점(\'.\')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
+|---|---|---|---|---|| `coinPair` |  취소 요청할 [coin pair](/5_Terms.md#coin-pair). [Currency](/5_Terms.md#currency-for-coin-trading)와 [Market](/5_Terms.md#market-for-coin-trading)을 점(\'.\')으로 구분한 문자열로, 대소문자를 구분합니다.<br/>
 예를 들어 \"BCH.ETH\"은 ETH으로 BCH를 거래한다는 의미입니다. | <span class="nowrap">String</span> | path |  O  | -->
 
 ## Response
@@ -215,7 +215,7 @@ O
 
 <td>
 
-결과 상태 코드. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -243,7 +243,7 @@ O
 
 <td>
 
-결과의 상세 메시지. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 

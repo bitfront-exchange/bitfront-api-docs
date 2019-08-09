@@ -7,7 +7,7 @@ To help you get a better understanding, we provide the list of important terms.
 
 A ticker symbol of a coin written in uppercase.
 
-BITBOX uses the commonly or officially used symbols of each cryptocurrency; all available coin codes are listed in [Market coin pair policy](api/market/v1-market-public-coins-pairPolicy-get.md#market-coin-pair-policy).
+BITBOX uses the commonly or officially used symbols of each cryptocurrency; all available coin codes are listed in [Market coin pair policy](/api/market/v1-market-public-coins-pairPolicy-get.md#market-coin-pair-policy).
 
 ## Coin pair
 
@@ -16,7 +16,7 @@ In this document, a coin pair is represented as a concatenated string of the [co
 For example, “BCH.ETH” represents the relation of Bitcoin cash against Ethereum.
 
 Note that a dot (.) is used as a delimiter in API calls while a slash (/) is generally used in cryptocurrency trading.
-Available coin pairs are listed in [Market coin pair policy](api/market/v1-market-public-coins-pairPolicy-get.md#market-coin-pair-policy).
+Available coin pairs are listed in [Market coin pair policy](/api/market/v1-market-public-coins-pairPolicy-get.md#market-coin-pair-policy).
 
 ## Completed order
 

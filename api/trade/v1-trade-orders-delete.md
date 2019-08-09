@@ -4,7 +4,7 @@ Requests to cancel a single order.<br/>
 If the order is partially filled, it only tries to cancel the remaining amount.<br/>
 
 > **Caution**<br/>
-> `statusCode` of 1000 means the cancellation is NOT successfully done BUT requested well. If you want to check whether the order has been cancelled, use [`/v1/account/orders/{orderID}`](../account/v1-account-orders-orderID-get.md#order-information).
+> `statusCode` of 1000 means the cancellation is NOT successfully done BUT requested well. If you want to check whether the order has been cancelled, use [`/v2/account/orders/{orderID}`](/api/account/v2-account-orders-orderID-get.md#order-information-v2).
 
 ## Endpoint URI
 
@@ -214,7 +214,7 @@ O
 
 <td>
 
-The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -242,7 +242,7 @@ O
 
 <td>
 
-The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 

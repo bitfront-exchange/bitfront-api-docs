@@ -117,7 +117,7 @@ O
 
 <td>
 
-결과 상태 코드. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -145,7 +145,7 @@ O
 
 <td>
 
-결과의 상세 메시지. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -265,7 +265,7 @@ O
 
 <td>
 
-[Market](../../5_Terms.md#market-for-coin-trading) 타입. 해당하는 암호화폐의 [coin code](../../5_Terms.md#coin-code)로 나타납니다. 예를 들어 비트코인은 "BTC", 이더리움은 "ETH"입니다.
+[Market](/5_Terms.md#market-for-coin-trading) 타입. 해당하는 암호화폐의 [coin code](/5_Terms.md#coin-code)로 나타납니다. 예를 들어 비트코인은 "BTC", 이더리움은 "ETH"입니다.
 
 </td>
 
@@ -293,7 +293,7 @@ O
 
 <td>
 
-[Currency](../../5_Terms.md#currency-for-coin-trading) 타입. 해당하는 암호화폐의 [coin code](../../5_Terms.md#coin-code)로 나타납니다. 예를 들어 비트코인은 "BTC", 이더리움은 "ETH"입니다.
+[Currency](/5_Terms.md#currency-for-coin-trading) 타입. 해당하는 암호화폐의 [coin code](/5_Terms.md#coin-code)로 나타납니다. 예를 들어 비트코인은 "BTC", 이더리움은 "ETH"입니다.
 
 </td>
 
@@ -321,7 +321,7 @@ O
 
 <td>
 
-[Currency](../../5_Terms.md#currency-for-coin-trading)의 노출 이름
+[Currency](/5_Terms.md#currency-for-coin-trading)의 노출 이름
 
 </td>
 
@@ -349,7 +349,7 @@ O
 
 <td>
 
-[Coin-pair](../../5_Terms.md#coin-pair) 타입. `marketType`과 `coinType`을 점(.)으로 연결한 문자열입니다.
+[Coin-pair](/5_Terms.md#coin-pair) 타입. `marketType`과 `coinType`을 점(.)으로 연결한 문자열입니다.
 
 </td>
 

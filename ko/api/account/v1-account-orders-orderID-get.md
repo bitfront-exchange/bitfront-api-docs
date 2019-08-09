@@ -1,4 +1,8 @@
-# Order information
+# Order information (Deprecated)
+
+> **Deprecated**
+> 
+> 이 API는 2019년 3Q 까지만 사용 가능합니다. [Order information API v2(`/v2/account/orders/orderID`)](/api/account/v2-account-orders-orderID-get.md#order-information-v2))를 사용하십시오.
 
 한 주문의 상세 정보를 가져옵니다.<br/>
 다음 식을 사용하여 이 주문이 취소되었는지 확인할 수 있습니다.<br/>
@@ -19,6 +23,11 @@
 </li>
 
 </ul>
+
+<br/>
+
+> **Note**<br/>
+> 이 API는, 조회한 주문의 Currency가 LINK이면 응답의 `currency` 필드에 "LINK"를 반환합니다.
 
 ## Endpoint URI
 
@@ -227,7 +236,7 @@ O
 
 <td>
 
-결과 상태 코드. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -255,7 +264,7 @@ O
 
 <td>
 
-결과의 상세 메시지. [`StatusCode` 정의](../../1_Overview.md#statuscode-정의)를 참고하십시오.
+결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.
 
 </td>
 
@@ -394,7 +403,7 @@ Long
 
 <td>
 
-[Market](../../5_Terms.md#market-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code)
+[Market](/5_Terms.md#market-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)
 
 </td>
 
@@ -422,7 +431,7 @@ String
 
 <td>
 
-[Currency](../../5_Terms.md#currency-for-coin-trading)의 [coin code](../../5_Terms.md#coin-code)
+[Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)
 
 </td>
 
@@ -716,7 +725,7 @@ Double
 
 <td>
 
-[Maker](../../5_Terms.md#maker) 주문에 대한 수수료 비율.<br/>
+[Maker](/5_Terms.md#maker) 주문에 대한 수수료 비율.<br/>
 수수료는 절대값이 아닙니다. 예를 들어 이 값이 0.001이면 수수료 비율이 0.1%라는 의미입니다.
 
 </td>
@@ -745,7 +754,7 @@ Double
 
 <td>
 
-[Taker](../../5_Terms.md#taker) 주문에 대한 수수료 비율.<br/>
+[Taker](/5_Terms.md#taker) 주문에 대한 수수료 비율.<br/>
 수수료는 절대값이 아닙니다. 예를 들어 이 값이 0.001이면 수수료 비율이 0.1%라는 의미입니다.
 
 </td>
@@ -803,7 +812,7 @@ Boolean
 
 <td>
 
-LINK로 거래 수수료 결제 시 [Maker](../../5_Terms.md#maker) 주문에 대한 수수료 비율.<br/>
+LINK로 거래 수수료 결제 시 [Maker](/5_Terms.md#maker) 주문에 대한 수수료 비율.<br/>
 `enableLinkFee`가 false이면 이 값은 0입니다.
 
 </td>
@@ -832,7 +841,7 @@ Double
 
 <td>
 
-LINK로 거래 수수료 결제 시 [Taker](../../5_Terms.md#taker) 주문에 대한 수수료 비율.<br/>
+LINK로 거래 수수료 결제 시 [Taker](/5_Terms.md#taker) 주문에 대한 수수료 비율.<br/>
 `enableLinkFee`가 false이면 이 값은 0입니다.
 
 </td>
@@ -865,7 +874,7 @@ Double
 \- "CREATE": 주문이 생성됨<br/>
 \- "REQUEST": 주문이 주문장에 요청됨<br/>
 \- "PROCESS": 주문이 부분적으로 취소되거나 체결됨<br/>
-\- "COMPLETE": 주문이 [완료](../../5_Terms.md#completed-order)됨 (취소된 것도 포함).
+\- "COMPLETE": 주문이 [완료](/5_Terms.md#completed-order)됨 (취소된 것도 포함).
 
 </td>
 
@@ -921,7 +930,7 @@ Long
 
 <td>
 
-주문이 [완료](../../5_Terms.md#completed-order)된 시각.<br/>
+주문이 [완료](/5_Terms.md#completed-order)된 시각.<br/>
 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다.<br/>
 주문이 완료되지 않았다면 이 값은 0입니다.
 

@@ -4,6 +4,11 @@ In this section, you can find the detailed descriptions of each API included in 
 
 > **Note**
 > 
+> Pursuant to the official ticker symbol of [LINK](http://link.network), BITBOX’s APIs will return “LN” when [Currency](/5_Terms.md#currency-for-coin-trading) is LINK.
+> As for order inquiries temporarily until Q3 of 2019, [Order information API(`/v1/account/orders/orderID`)](/api/account/v1-account-orders-orderID-get.md#order-information-deprecated) will be provided, which returns “LINK”.
+
+> **Tip**
+> 
 > The `Loc.` column in the request parameter table describes where each parameter passes in.
 > 
 >   - path: The parameter passes in the request path.
@@ -38,5 +43,6 @@ In this section, you can find the detailed descriptions of each API included in 
   - [Balance](api/account/v1-account-balances-get.md)
   - [Currency balance](api/account/v1-account-balances-currency-get.md)
   - [User trade history v2](api/account/v2-account-tradeHistory-get.md)
-  - [Order information](api/account/v1-account-orders-orderID-get.md)
+  - [Order information (Deprecated)](api/account/v1-account-orders-orderID-get.md)
+  - [Order information v2](api/account/v2-account-orders-orderID-get.md)
   - [Coin transfer history](api/account/v1-account-transactionHistory-get.md)

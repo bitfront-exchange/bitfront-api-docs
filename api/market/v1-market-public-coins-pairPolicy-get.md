@@ -118,7 +118,7 @@ O
 
 <td>
 
-The result status code. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -146,7 +146,7 @@ O
 
 <td>
 
-The detailed message of the result. See [`statusCode` definitions](../../1_Overview.md#statuscode-definitions).
+The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).
 
 </td>
 
@@ -265,7 +265,7 @@ Array of [pairList](#pairlist)
 
 <td>
 
-[Market](../../5_Terms.md#market-for-coin-trading) type. Displayed as [coin code](../../5_Terms.md#coin-code). e. g. Bitcoin as "BTC" and Ethereum as "ETH"
+[Market](/5_Terms.md#market-for-coin-trading) type. Displayed as [coin code](/5_Terms.md#coin-code). e. g. Bitcoin as "BTC" and Ethereum as "ETH"
 
 </td>
 
@@ -293,7 +293,7 @@ O
 
 <td>
 
-[Currency](../../5_Terms.md#currency-for-coin-trading) type. Displayed as [coin code](../../5_Terms.md#coin-code). e. g. Bitcoin as "BTC" and Ethereum as "ETH"
+[Currency](/5_Terms.md#currency-for-coin-trading) type. Displayed as [coin code](/5_Terms.md#coin-code). e. g. Bitcoin as "BTC" and Ethereum as "ETH"
 
 </td>
 
@@ -321,7 +321,7 @@ O
 
 <td>
 
-Display name of [Currency](../../5_Terms.md#currency-for-coin-trading)
+Display name of [Currency](/5_Terms.md#currency-for-coin-trading)
 
 </td>
 
@@ -349,7 +349,7 @@ O
 
 <td>
 
-[Coin-pair](../../5_Terms.md#coin-pair) type. String concatenation of `marketType` and `coinType` with a dot (.)
+[Coin-pair](/5_Terms.md#coin-pair) type. String concatenation of `marketType` and `coinType` with a dot (.)
 
 </td>
 
