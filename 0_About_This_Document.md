@@ -12,6 +12,7 @@
       - Added [Order information v2](/api/account/v2-account-orders-orderID-get.md#order-information-v2)
       - Replaced Order information API link in the description of [Cancellation of all open orders](/api/trade/v1-trade-openOrders-delete.md#cancellation-of-all-open-orders) and [Cancellation](/api/trade/v1-trade-orders-delete.md#cancellation) with Order information v2
       - Added the description of LINK ticker symbol in the API list
+      - Added the description of fields in [Open orders](/api/trade/v1-trade-openOrders-get.md#open-orders)
 
 **v0.4 (2019-4)**
 

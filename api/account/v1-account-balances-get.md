@@ -196,7 +196,7 @@ See the reference object.
   - Type:  array
     </p>
 
-Array of [balance](#balance-1)
+Array of [balance](#balance)
 
 ### balance
 

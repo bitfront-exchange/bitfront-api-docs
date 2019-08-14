@@ -545,7 +545,7 @@ String
 
 <td>
 
-. See the reference object.
+The amount requested
 
 </td>
 
@@ -573,7 +573,7 @@ Double
 
 <td>
 
-. See the reference object.
+The amount that are not filled or cancelled
 
 </td>
 
@@ -601,7 +601,7 @@ Double
 
 <td>
 
-. See the reference object.
+The limit price
 
 </td>
 

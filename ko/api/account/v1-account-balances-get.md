@@ -195,7 +195,7 @@ O
   - Type:  array
     </p>
 
-[balance](#balance-1)
+[balance](#balance)
 객체의 배열입니다.
 
 ### balance
