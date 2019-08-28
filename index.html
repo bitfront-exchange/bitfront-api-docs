@@ -106,28 +106,39 @@
           readyTransition : true, // default
           responsiveTables: true  // default
       },
-
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function(content) {
+            return table_backslash_to_br(content)
+          });
+        }
+      ],
       logo: 'images/bitbox_vertical.png'
     }
 
+
   </script>
   <script>
-  // const gitalk = new Gitalk({
-  //   clientID: 'Github Application Client ID',
-  //   clientSecret: 'Github Application Client Secret',
-  //   repo: 'Github repo',
-  //   owner: 'Github repo owner',
-  //   admin: ['Github repo collaborators, only these guys can initialize github issues'],
-  //   // facebook-like distraction free mode
-  //   distractionFreeMode: false
-  // })
+  function table_backslash_to_br(content) {
+    // for multi-line tables
+    var startIndex = 0, endIndex = 0, table = ''
+    do {
+      startIndex = content.indexOf('\n| ', endIndex)
+      endIndex = content.indexOf('|\n\n', startIndex)
+      table = content.substring(startIndex, (endIndex == -1 ? content.length : endIndex) + 2).replace(/\\\n/g, '<br /> ')
+      // console.log("start= " + startIndex + ", end= " + endIndex + 2)
+      // console.log("here::" + table)
+      content = content.substring(0, startIndex) + table + content.substring((endIndex == -1 ? content.length: endIndex) + 1)
+      // endIndex = content.substring(0, startIndex - 1).concat(table).length
+    } while(endIndex != -1 && startIndex != -1)
+
+    return content;
+  }
 </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <!-- <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script> -->
-
-
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
   <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script> -->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
