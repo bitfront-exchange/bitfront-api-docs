@@ -48,7 +48,7 @@ GET https://openapi.bitbox.me/v2/account/orders/{orderID}
 | `orderType` | 주문 타입. 다음 중 하나입니다. <br/>- “MARKET”: Market order <br/>- “LIMIT”: Limit order <br/>- "STOPLIMIT": Stop-Limit order | String | |
 | `orderSide` | 주문 방향. 다음 중 하나입니다. <br/>- “BUY”: 사기 <br/>- “SELL”: 팔기 | String | |
 | `price` | 제한 가격 | Double | |
-| `stopPrice` | 예약 실행 가격. `orderType`이 "STOPLIMIT"이 아니면 0으로 나타납니다. | Double | |
+| `stopPrice` | 예약 실행 가격. `orderType`이 "STOPLIMIT"일 때만 나타납니다. | Double | |
 | `initialRequestAmount` | 처음 요청한 총수량 | Double | |
 | `requestAmount` | 취소한 후의 총수량 | Double | |
 | `remainAmount` | 체결되지도 않고 취소되지도 않은 총수량 | Double | |
@@ -60,7 +60,7 @@ GET https://openapi.bitbox.me/v2/account/orders/{orderID}
 | `enableLnFee` | LN으로 거래 수수료 결제 여부. <br/>LN으로 거래 수수료를 결제하는 방법에 관한 상세한 설명은 [Transaction fees](https://www.bitbox.me/fees/)를 참고하십시오. | Boolean | |
 | `makerLnFeeRate` | LN으로 거래 수수료 결제 시 [Maker](/5_Terms.md#maker) 주문에 대한 수수료 비율. <br/>`enableLnFee`가 false이면 이 값은 0입니다. | Double | |
 | `takerLnFeeRate` | LN로 거래 수수료 결제 시 [Taker](/5_Terms.md#taker) 주문에 대한 수수료 비율. <br/>`enableLnFee`가 false이면 이 값은 0입니다. | Double | |
-| `status` | 주문의 상태. 다음 중 하나입니다. <br/>- “CREATE”: 주문이 생성됨 <br/>- “PENDING”: STOPLITMIT 주문이 예약되었고 아직 실행되지 않음 <br/>- “REQUEST”: 주문이 주문장에 요청됨 <br/>- “PROCESS”: 주문이 부분적으로 취소되거나 체결됨 <br/>- “COMPLETE”: 주문이 [완료](/5_Terms.md#completed-order)됨 (취소된 것도 포함). | String | |
+| `status` | 주문의 상태. 다음 중 하나입니다. <br/>- “CREATE”: 주문이 생성됨 <br/>- “PENDING”: STOPLIMIT 주문이 예약되었고 아직 실행되지 않음 <br/>- “REQUEST”: 주문이 주문장에 요청됨 <br/>- “PROCESS”: 주문이 부분적으로 취소되거나 체결됨 <br/>- “COMPLETE”: 주문이 [완료](/5_Terms.md#completed-order)됨 (취소된 것도 포함). | String | |
 | `createAt` | 트랜잭션 생성 시각. 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다. | Long | |
 | `completedAt` | 주문이 [완료](/5_Terms.md#completed-order)된 시각. <br/>밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다. <br/>주문이 완료되지 않았다면 이 값은 0입니다. | Long | |
 | `averageFillPrice` | 체결된 총수량의 평균 가격 | Double | |

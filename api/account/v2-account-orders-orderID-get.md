@@ -48,7 +48,7 @@ GET https://openapi.bitbox.me/v2/account/orders/{orderID}
 | `orderType` | A type of the order. It is one of the following: <br/>- "MARKET": Market order <br/>- "LIMIT": Limit order <br/>- "STOPLIMIT": Stop-Limit order | String | |
 | `orderSide` | A side of the order. It is one of the following: <br/>- "BUY": buy side <br/>- "SELL": sell side | String | |
 | `price` | The limit price | Double| |
-| `stopPrice` | The price at which the limit order is triggered. It is 0 if `orderType` is NOT "STOPLIMIT". | Double | |
+| `stopPrice` | The price at which the limit order is triggered. It is included only if `orderType` is "STOPLIMIT". | Double | |
 | `initialRequestAmount` |The amount requested for the first time|Double| |
 | `requestAmount` |The amount after cancellation|Double| |
 | `remainAmount` |The amount that are not filled or cancelled|Double| |

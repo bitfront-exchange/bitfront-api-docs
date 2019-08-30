@@ -46,13 +46,13 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
 | `orderID`   | 주문의 ID                                                                                | Long   |          |
 | `market`    | [Market](/5_Terms.md#market-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)     | String |          |
 | `currency`  | [Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code) | String |          |
-| `orderType`| 주문 타입. 다음 중 하나입니다. <br/>- "MARKET": Market order <br/>- "LIMIT": Limit order <br/>- "STOPLITMIT": Stop-Limit order | String | |
+| `orderType`| 주문 타입. 다음 중 하나입니다. <br/>- "MARKET": Market order <br/>- "LIMIT": Limit order <br/>- "STOPLIMIT": Stop-Limit order | String | |
 | `orderSide` | 주문 방향. 다음 중 하나입니다. <br/>- “BUY”: 사기 <br/>- “SELL”: 팔기 | String | |
 | `requestAmount` | 요청한 총수량 | Double | |
 | `remainAmount` | 요청한 수량 중 체결되지도 않고 취소되지도 않은 총수량 | Double | |
 | `price` | 제한 가격 | Double | |
-| `stopPrice` | 예약 실행 가격. `orderType`이 "STOPLIMIT"이 아니면 0으로 나타납니다. | Double | |
-| `status` | 열린 주문의 상태. 다음 중 하나입니다. <br/>- “CREATE”: 주문이 생성됨 <br/>- “PENDING”: STOPLITMIT 주문이 예약되었고 아직 실행되지 않음 <br/>- “REQUEST”: 주문이 주문장에 요청됨 <br/>- “PROCESS”: 주문이 부분적으로 취소되거나 체결됨 <br/>- “COMPLETE”: 주문이 [완료](/5_Terms.md#completed-order)됨 (취소된 것도 포함). | String | |
+| `stopPrice` | 예약 실행 가격. `orderType`이 "STOPLIMIT"일 때만 나타납니다. | Double | |
+| `status` | 열린 주문의 상태. 다음 중 하나입니다. <br/>- “CREATE”: 주문이 생성됨 <br/>- “PENDING”: STOPLIMIT 주문이 예약되었고 아직 실행되지 않음 <br/>- “REQUEST”: 주문이 주문장에 요청됨 <br/>- “PROCESS”: 주문이 부분적으로 취소되거나 체결됨 <br/>- “COMPLETE”: 주문이 [완료](/5_Terms.md#completed-order)됨 (취소된 것도 포함). | String | |
 | `createAt` | 주문 생성 시각. <br/>밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다. | Long | |
 | `completedAt` | 주문이 [완료](/5_Terms.md#completed-order)된 시각. <br/>밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다. <br/>주문이 완료되지 않았다면 이 값은 0입니다. | Long | |
 
@@ -86,7 +86,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "BUY",
           "price": 0.00100838,
-          "stopPrice": 0,
           "requestAmount": 145,
           "remainAmount": 36,
           "status": "PROCESS",
@@ -100,7 +99,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "SELL",
           "price": 0.00100916,
-          "stopPrice": 0,
           "requestAmount": 142,
           "remainAmount": 142,
           "status": "REQUEST",
@@ -114,7 +112,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "SELL",
           "price": 0.00100916,
-          "stopPrice": 0,
           "requestAmount": 141,
           "remainAmount": 141,
           "status": "REQUEST",
@@ -128,7 +125,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "SELL",
           "price": 0.00100916,
-          "stopPrice": 0,
           "requestAmount": 166,
           "remainAmount": 166,
           "status": "REQUEST",
@@ -142,7 +138,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "SELL",
           "price": 0.00100918,
-          "stopPrice": 0,
           "requestAmount": 129,
           "remainAmount": 129,
           "status": "REQUEST",
@@ -155,7 +150,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "currency": "XRP",
           "orderSide": "SELL",
           "price": 0.00100918,
-          "stopPrice": 0,
           "requestAmount": 128,
           "remainAmount": 128,
           "status": "REQUEST",
@@ -169,7 +163,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "SELL",
           "price": 0.00100917,
-          "stopPrice": 0,
           "requestAmount": 116,
           "remainAmount": 116,
           "status": "REQUEST",
@@ -183,7 +176,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "BUY",
           "price": 0.00100831,
-          "stopPrice": 0,
           "requestAmount": 117,
           "remainAmount": 65,
           "status": "PROCESS",
@@ -197,7 +189,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "BUY",
           "price": 0.00100824,
-          "stopPrice": 0,
           "requestAmount": 111,
           "remainAmount": 76,
           "status": "PROCESS",
@@ -211,7 +202,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "BUY",
           "price": 0.00100823,
-          "stopPrice": 0,
           "requestAmount": 153,
           "remainAmount": 52,
           "status": "PROCESS",
@@ -225,7 +215,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "BUY",
           "price": 0.00100815,
-          "stopPrice": 0,
           "requestAmount": 176,
           "remainAmount": 51,
           "status": "PROCESS",
@@ -239,7 +228,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "BUY",
           "price": 0.00100808,
-          "stopPrice": 0,
           "requestAmount": 177,
           "remainAmount": 50,
           "status": "PROCESS",
@@ -253,7 +241,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "BUY",
           "price": 0.00100805,
-          "stopPrice": 0,
           "requestAmount": 135,
           "remainAmount": 64,
           "status": "PROCESS",
@@ -267,7 +254,6 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
           "orderType": "LIMIT",
           "orderSide": "BUY",
           "price": 0.00100802,
-          "stopPrice": 0,
           "requestAmount": 147,
           "remainAmount": 48,
           "status": "PROCESS",
