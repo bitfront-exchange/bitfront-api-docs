@@ -39,8 +39,8 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'BITBOX Open API documentation',
-      repo: 'https://github.com/bitbox-exchange/bitbox-api-docs',
+      name: 'BITFRONT Open API documentation',
+      repo: 'https://github.com/bitfront-exchange/bitfront-api-docs',
       loadSidebar: true,
       subMaxLevel: 2,
       loadNavbar: true,
@@ -58,15 +58,6 @@
               currentpath.splice(currentpath.length - 1 - upcount, upcount + 1)
               currentpath.splice(0, 1) // remove the the first #
               arguments[0] = currentpath.join('/') + splits[splits.length-1]
-            }
-
-            else if( window.location.href.includes('/ko/') && !arguments[0].endsWith('/') && !arguments[0].startsWith('#') && !arguments[0].startsWith('..') && !arguments[0].startsWith('http')) {
-              if( arguments[0].startsWith('/') ) {
-                arguments[0] = "/ko" + arguments[0]
-              } else {
-                arguments[0] = "/ko/" + arguments[0]
-              }
-              // return this.origin.link.apply(this, arguments);
             }
 
             // return marked.link(href, title, text)
@@ -113,7 +104,7 @@
           });
         }
       ],
-      logo: 'images/bitbox_vertical.png'
+      logo: 'images/BITFRONT_logo.png'
     }
 
 
