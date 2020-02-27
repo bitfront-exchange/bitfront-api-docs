@@ -1,13 +1,13 @@
 # Coin transfer history
 
-Retrieves your coin transfer history under the given conditions. <br/>
+Retrieve the transfer history of cryptocurrency and fiat currency under the given conditions. <br/>
 You can set the conditions through the query parameters. See the parameter descriptions. <br/>
 `responseData.content` in the response will pass the result data, which are sorted in descending order of `responseData.content.date`.
 
 ## Endpoint URI
 
 ```
-GET https://openapi.bitbox.me/v1/account/transactionHistory?currency={currency}&startTime={startTime}&endTime={endTime}&transferType={transferType}&page={page}&pageSize={pageSize}
+GET https://openapi.bitfront.me/v1/account/transactionHistory?currency={currency}&startTime={startTime}&endTime={endTime}&transferType={transferType}&page={page}&pageSize={pageSize}
 ```
 
 ## Request parameters
@@ -54,55 +54,60 @@ GET https://openapi.bitbox.me/v1/account/transactionHistory?currency={currency}&
 
 | Name           | Description                                                                               | Type   | Included |
 | -------------- | ----------------------------------------------------------------------------------------- | ------ | -------- |
-| `date`         | The time of the coin transfer. It is a timestamp in milliseconds since Unix Epoch in UTC. | Long   |          |
-| `coinType`     | A [coin code](/5_Terms.md#coin-code) of the transferred coin                              | String |          |
-| `transferType` | The type of the coin transfer. It is one of the following: <br/>- "WITHDRAW": Withdrawal transfer <br/>- "DEPOSIT": Deposit transfer | String | |
-| `amount` | The amount of the coin to transfer | Double | |
-| `fee` | The transfer fee | Double | |
-| `total` | `amount + fee` | Double | |
-| `address` | The target address | String | |
-| `status` | The status of the coin transfer. It should be one of the following: <br/>- "REQUEST": The transfer is requested. <br/>- "PENDING": The transfer is pending. <br/>- "CONFIRM": The transfer is confirmed. <br/>- "FAIL": The transfer fails. <br/>- "CANCEL_REQUEST": The transfer is requested for cancellation. <br/>- "CANCEL": The transfer is completely cancelled. <br/>- "CANCEL_FAIL": The transfer is requested for cancellation but the cancellation fails. | String | |
+| `date`         | Transfer time. Unix Epoch (UTC) timestamp in milliseconds | Long   |          |
+| `transferType` | Transfer type.<br/>- “WITHDRAW” <br/>- “DEPOSIT” | String | |
+| `amount` | Quantity of transferred currency in total | Double | |
+| `fee` | Transfer fee | Double | |
+| `total` | - When depositing/withdrawing cryptocurrency: `amount + fee`<br/>- When depositing fiat currency: `amount - fee`<br/>- When withdrawing fiat currency: `amount + fee` | Double | |
+| `address` | - Cryptocurrency: Address for deposit<br/>- fiat currency: N/A | String | |
+| `tag` | -  Cryptocurrency: Tag of the address for deposit<br/>- fiat currency: N/A | String | |
+| `bankName` | - Cryptocurrency: N/A<br/>- fiat currency: Bank name | String | |
+| `accountNo` | - Cryptocurrency: N/A<br/>- fiat currency: Account number at the bank for deposit | String | |
+| `status` | - “IN_PROGRESS”: Transfer underway<br/>- “COMPLETE”: Transfer completed <br/>- “CANCEL”: Transfer cancelled <br/>- “FAIL”: Transfer failed <br/>- “RETURNING”: Refund underway<br/>- “PENDING”: Transfer pending | String | |
+| `currency` | Currency [coin code](/5_Terms.md#coin-code) | String | |
 
 **A response example**
 
-```json
+``` json
 {
-  "timezone": "UTC",
-  "responseTime": 1527658634583,
-  "statusCode": 1000,
-  "statusMessage": "SUCCESS",
-  "responseData": {
-    "number": 0,
-    "size": 100,
-    "totalPages": 1,
-    "numberOfElements": 2,
-    "totalElements": 2,
-    "previousPage": false,
-    "first": true,
-    "nextPage": false,
-    "last": true,
-    "content": [
-      {
-        "date": 1525420991000,
-        "coinType": "BTC",
-        "transferType": "WITHDRAW",
-        "amount": 0.5,
-        "fee": 0,
-        "total": 0.5,
-        "address": "2N8V9g4Ezd5wFGmoNgJYy8YUuYUMYqnATWJ",
-        "status": "CONFIRM"
-      },
-      {
-        "date": 1525420983000,
-        "coinType": "BTC",
-        "transferType": "WITHDRAW",
-        "amount": 0.5,
-        "fee": 0,
-        "total": 0.5,
-        "address": "2N9rMM6SrSZ7Xspfqu1QMmTXVvYGm8KPjTu",
-        "status": "CONFIRM"
-      }
-    ]
-  }
+    "timezone": "UTC",
+    "responseTime": 1527658634583,
+    "statusCode": 1000,
+    "statusMessage": "SUCCESS",
+    "responseData": {
+        "number": 0,
+        "size": 100,
+        "totalPages": 1,
+        "numberOfElements": 2,
+        "totalElements": 2,
+        "previousPage": false,
+        "first": true,
+        "nextPage": false,
+        "last": true,
+        "content": [
+            {
+                "date": 1578647145000,
+                "transferType": "DEPOSIT",
+                "amount": 55,
+                "fee": 0,
+                "total": 55,
+                "status": "COMPLETE",
+                "bankName": "CITIZENS BANK NA",
+                "accountNo": "*******1128",
+                "currency": "USD"
+            },
+            {
+                "date": 1575708975590,
+                "transferType": "WITHDRAW",
+                "amount": 3.000000,
+                "fee": 1.000000,
+                "total": 4.000000,
+                "address": "rGQRwmUfZzdF9p81oJmKeBJV5irjDnoUSf",
+                "tag": "171",
+                "status": "CANCEL",
+                "currency": "XRP"
+            }
+        ]
+    }
 }
 ```

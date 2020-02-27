@@ -1,11 +1,10 @@
 # Reference
 
-BITBOX API가 제공하는 모든 API의 상세 설명을 기술합니다.
+BITFRONT API가 제공하는 모든 API의 상세 설명을 기술합니다.
 
 > **Note**
 > 
-> [LINK](http://link.network)의 공식 티커 심볼에 따라, BITBOX의 API는 [Currency](/5_Terms.md#currency-for-coin-trading)가 LINK일 때 “LN”로 표기하여 반환합니다.
-> 단, 주문 조회 시 2019년 3분기까지 한시적으로 “LINK”로 반환하는 [Order information API(`/v1/account/orders/orderID`)](/api/account/v1-account-orders-orderID-get.md#order-information-deprecated)를 제공합니다.
+> [LINK](http://link.network)의 공식 티커 심볼에 따라, BITFRONT의 API는 [Currency](/ko/5_Terms.md#currency-for-coin-trading)가 LINK일 때 “LN”로 표기하여 반환합니다.
 
 > **Tip**
 > 
@@ -21,28 +20,27 @@ BITBOX API가 제공하는 모든 API의 상세 설명을 기술합니다.
 
 ## Public API
 
-  - [Server time](api/public/v1-public-time-get.md)
+  - [Server time](/ko/api/public/v1-public-time-get.md)
 
 ## Market API
 
-  - [Market coin pair policy](api/market/v1-market-public-coins-pairPolicy-get.md)
-  - [Tick values](api/market/v1-market-public-currentTickValue-get.md)
-  - [Order book](api/market/v1-market-public-orderBooks-get.md)
-  - [Market trade history](api/market/v1-market-public-tradeHistory-get.md)
+  - [Market coin pair policy](/ko/api/market/v1-market-public-coins-pairPolicy-get.md)
+  - [Tick values](/ko/api/market/v1-market-public-currentTickValue-get.md)
+  - [Order book](/ko/api/market/v1-market-public-orderBooks-get.md)
+  - [Market trade history](/ko/api/market/v1-market-public-tradeHistory-get.md)
 
 ## Trade API
 
-  - [Limit order](api/trade/v1-trade-limitOrders-post.md)
-  - [Market order](api/trade/v1-trade-marketOrders-post.md)
-  - [Open orders](api/trade/v1-trade-openOrders-get.md)
-  - [Cancellation](api/trade/v1-trade-orders-delete.md)
-  - [Cancellation of all open orders](api/trade/v1-trade-openOrders-delete.md)
+  - [Limit order](/ko/api/trade/v1-trade-limitOrders-post.md)
+  - [Market order](/ko/api/trade/v1-trade-marketOrders-post.md)
+  - [Open orders](/ko/api/trade/v1-trade-openOrders-get.md)
+  - [Cancellation](/ko/api/trade/v1-trade-orders-delete.md)
+  - [Cancellation of all open orders](/ko/api/trade/v1-trade-openOrders-delete.md)
 
 ## Account API
 
-  - [Balance](api/account/v1-account-balances-get.md)
-  - [Currency balance](api/account/v1-account-balances-currency-get.md)
-  - [User trade history v2](api/account/v2-account-tradeHistory-get.md)
-  - [Order information (Deprecated)](api/account/v1-account-orders-orderID-get.md)
-  - [Order information v2](api/account/v2-account-orders-orderID-get.md)
-  - [Coin transfer history](api/account/v1-account-transactionHistory-get.md)
+  - [Balance](/ko/api/account/v1-account-balances-get.md)
+  - [Currency balance](/ko/api/account/v1-account-balances-currency-get.md)
+  - [User trade history v2](/ko/api/account/v2-account-tradeHistory-get.md)
+  - [Order information v2](/ko/api/account/v2-account-orders-orderID-get.md)
+  - [Coin transfer history](/ko/api/account/v1-account-transactionHistory-get.md)

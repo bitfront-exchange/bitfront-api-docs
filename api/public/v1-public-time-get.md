@@ -4,12 +4,12 @@ Gets the server's current time in milliseconds since Unix Epoch in UTC.
 
 > **Note**
 >
-> Only `X-API-Key` is required in the request header for this API.
+> This API can be used without API KEY.
 
 ## Endpoint URI
 
 ```
-GET https://openapi.bitbox.me/v1/public/time
+GET https://openapi.bitfront.me/v1/public/time
 ```
 
 ## Request parameters
@@ -21,7 +21,7 @@ None
 | Name           | Description                                                   | Type   | Included |
 | -------------- | ------------------------------------------------------------- | ------ | -------- |
 | `timezone`     | The time standard for the `responseTime`. It is always "UTC". | String | O        |
-| `responseTime` | The time when it responds. <br/>It is a timestamp in milliseconds since Unix Epoch in UTC. | Long | O |
+| `responseTime` | The time when it responds. <br/>It is a timestamp in milliseconds since Unix Epoch in UTC. | Long | √ |
 
 **A response example**
 

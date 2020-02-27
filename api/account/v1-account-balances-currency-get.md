@@ -5,7 +5,7 @@ Gets your account currency balance for the given currency.
 ## Endpoint URI
 
 ```
-GET https://openapi.bitbox.me/v1/account/balances/{currency}
+GET https://openapi.bitfront.me/v1/account/balances/{currency}
 ```
 
 ## Request parameters

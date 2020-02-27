@@ -1,56 +1,20 @@
 # Authentication and security policy
 
-BITBOX API has an authentication and security policy for user protection.
+BITFRONT API has an authentication and security policy for user protection.
 All users who want to use the API must comply with the policy.
 
 ## API KEY and API SECRET
 
-To use BITBOX API, you must have your own API KEY and API SECRET.
+You need API KEY and API SECRET to use BITFRON API for inquiring transaction and account-linked information.
 
-  - To gain an API KEY and an API SECRET, you must sign up to [BITBOX](http://bitbox.me). See [Prerequisites](/1_Overview.md#prerequisites) for details.
+  - APIs for simple inquiry, starting with `/v*/public` or `/v*/market/public`, do not require these credentials.
+  - To gain an API KEY and an API SECRET, you must sign up to [BITFRONT](http://bitfront.me). See [Prerequisites](/1_Overview.md#prerequisites) for details.
   - API KEYs and API SECRETs are case sensitive.
 
 > **Note**
-> 
-> You must store these credentials in a safe place. We will not show them again for your protection. If you lose your API KEY, you must create a new one.
+>
+> You must store these credentials in a safe place. We will not show them again for your protection. If you lose your API SECRET, you must create a new API KEY.
 
-## Mandatory parameters
-
-### For public APIs
-
-For public APIs which start with `/v*/public` or `/v*/market/public`, the following parameter must be included in the HTTP header.
-
-| Parameter name | Description                      |
-| -------------- | -------------------------------- |
-| `X-API-KEY`    | API KEY of user issued by BITBOX |
-
-Here is an example of a request.
-
-``` bash
-curl https://openapi.bitbox.me/v1/public/time \
-  --header "X-API-KEY: <Your API KEY>"
-```
-
-### For trade, market, and account APIs
-
-For all APIs other than public APIs, the following parameters must be included in the HTTP header.
-
-| **Parameter name** | **Description**                                                                                           |
-| ------------------ | --------------------------------------------------------------------------------------------------------- |
-| `X-API-KEY`        | API KEY of user issued by BITBOX                                                                          |
-| `X-API-SIGN`       | HMAC-SHA256 signature, pre-generated in compliance with the [Signature policy](#signature-policy) section |
-| `X-API-TIMESTAMP`  | UTC Unix Epoch in milliseconds                                                                            |
-| `X-API-NONCE`      | A 5-digit arbitrary positive integer that has not been used before within the same timestamp (e.g. 12345) |
-
-Here is an example of a request.
-
-``` bash
-curl https://openapi.bitbox.me/v1/market/public/currentTickValue?coinPair=BCH.ETH \
-  --header "X-API-KEY: <your API KEY>" \
-  --header "X-API-SIGN: <the user generated message signature>" \
-  --header "X-API-TIMESTAMP: <a timestamp for your request>" \
-  --header "X-API-NONCE: <a nonce value>"
-```
 
 ## Timing security
 
@@ -67,13 +31,14 @@ Requests are deemed as unsafe and rejected under the following conditions:
 
 The number of requests per API KEY is limited as follows:
 
-  - For all requests, each API Key is limited to 5 RPS (requests per second) by default, unless otherwise agreed.
+  - Each API KEY for all requests is allowed for 3 times per second and 30 times per minute. (Unless agreed otherwise)
+      - Exception) `/v2/account/tradeHistory` API is allowed 1 time per second and 30 times per minute.
   - For orders or order cancellations, the recommended interval between requests is at least 10ms. Any interval shorter than the recommendation can result in failure.
   - Any requests exceeding the RPS limit are rejected.
 
 ## Signature policy
 
-All API request must be signed.
+API requests that require API KEY must have a signature.
 
   - Signatures must be HMAC-SHA256 signatures, which can be constructed using user API SECRET with a concatenated string of nonce, timestamp, method, requestPath, queryString, and requestBody.
 
@@ -84,18 +49,18 @@ All API request must be signed.
   - Method is the HTTP method of the request and must be in uppercase.
 
   - RequestPath is the path of the requested URI.
-    
-    For example, the requestPath is `/v1/market/public/orderBooks` when the URI is `https://openapi.bitbox.me/v1/market/public/orderBooks?coinPair=ETH.BTC&depth=5`.
+
+    For example, the requestPath is `/v1/trade/openOrders` when the URI is `https://openapi.bitfront.me/v1/trade/openOrders?market=ETH&currency=BTC&max=100`.
 
   - QueryString is the query parameter string of the requested URI.
-    
-    For example, the queryString is `coinPair=ETH.BTC&depth=5` when the URI is `https://openapi.bitbox.me/v1/market/public/orderBooks?coinPair=ETH.BTC&depth=5`.
+
+    For example, the queryString is `market=ETH&currency=BTC&max=100` when the URI is `https://openapi.bitfront.me/v1/trade/openOrders?market=ETH&currency=BTC&max=100`.
     Note that “?”, the delimiter character, is excluded.
-    
+
     QueryString is omissible for POST requests.
 
   - RequestBody is the body string of the request. It must be a string concatenation of body parameters with “&” and “=” as delimiters.
-    
+
     Requestbody is omissible for GET requests.
 
 ### Generating a signature
@@ -119,8 +84,8 @@ The API for the example is as follows:
 | **Item**     | **Value**                          |
 | :----------- | :--------------------------------- |
 | HTTP Method  | GET                                |
-| Request path | `/v1/market/public/orderBooks`     |
-| Parameters   | `coinPair`: ETH.BTC, `depth`: 1000 |
+| Request path | `/v1/trade/openOrders`             |
+| Parameters   | `market`: ETH, `currenty`: BTC, `max`: 100 |
 
 The target string for the signature is as follows:
 
@@ -129,7 +94,8 @@ The target string for the signature is as follows:
 In LINUX, generate the HMAC-SHA256 signature by using the `echo` and `openssl` commands.
 
 ``` bash
-echo -n "123451523864107010GET/v1/market/public/orderBookscoinPair=ETH.BTC&depth=1000" | openssl dgst -sha256 -hmac "dwjnGqCVzfHlW6Q9r4BjXpmiK1WCdMBI"
+echo -n "123451523864107010GET/v1/trade/openOrdersmarket=ETH&currency=BTC&max=100" \
+  | openssl dgst -sha256 -hmac "dwjnGqCVzfHlW6Q9r4BjXpmiK1WCdMBI"
 (stdin)= 4e211ada0a332cb8611560c2109eed51618ea4aed3976eb973e9edae12d433e4
 ```
 
@@ -141,7 +107,7 @@ curl --header "X-API-KEY: 6W206egN32nCQ0VB" \
      --header "X-API-TIMESTAMP: 1523864107010" \
      --header "X-API-NONCE: 12345" \
      --header 'content-type: application/x-www-form-urlencoded' \
-     -X GET '/v1/market/public/orderBooks?coinPair=ETH.BTC&depth=1000' \
+     -X GET '/v1/trade/openOrders?market=ETH&currency=BTC&max=100' \
 ```
 
 **Example 2: Request body**
@@ -162,7 +128,8 @@ The target string for the signature is as follows:
 In LINUX, generate the HMAC-SHA256 signature by using the `echo` and `openssl` commands.
 
 ``` bash
-echo -n "123451523864107010POST/v1/trade/marketOrdersquantity=1&coinPair=BCH.ETH&orderSide=BUY" | openssl dgst -sha256 -hmac "dwjnGqCVzfHlW6Q9r4BjXpmiK1WCdMBI"
+echo -n "123451523864107010POST/v1/trade/marketOrdersquantity=1&coinPair=BCH.ETH&orderSide=BUY" \
+  | openssl dgst -sha256 -hmac "dwjnGqCVzfHlW6Q9r4BjXpmiK1WCdMBI"
 (stdin)=03838b25c336e0a6fb3617b9b07c9da9d91d96ab0e61598aa7e6cd1396b2b3ef
 ```
 
@@ -174,6 +141,6 @@ curl --header "X-API-KEY: 6W206egN32nCQ0VB" \
      --header "X-API-TIMESTAMP: 1523864107010" \
      --header "X-API-NONCE: 12345" \
      --header 'content-type: application/x-www-form-urlencoded' \
-     -X POST 'https://openapi.bitbox.me/v1/trade/marketOrders' \
+     -X POST 'https://openapi.bitfront.me/v1/trade/marketOrders' \
      --data 'quantity=1&coinPair=BCH.ETH&orderSide=BUY'
 ```

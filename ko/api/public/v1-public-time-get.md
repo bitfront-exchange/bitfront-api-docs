@@ -3,14 +3,12 @@
 서버의 현재 시각을 가져옵니다. 반환값은 밀리초 단위 Unix Epoch (UTC)의 타임스탬프입니다.
 
 > **Note**
->
-> 이 API는 헤더 파라미터에 `X-API-Key`만 전달하면 됩니다.
+> 
+> 이 API는 API KEY 발급 없이 사용할 수 있습니다.
 
 ## Endpoint URI
 
-```
-GET https://openapi.bitbox.me/v1/public/time
-```
+    GET https://openapi.bitfront.me/v1/public/time
 
 ## Request parameters
 

@@ -10,21 +10,21 @@ If the order is partially filled, it only tries to cancel the remaining amount.
 ## Endpoint URI
 
 ```
-DELETE https://openapi.bitbox.me/v1/trade/orders/{orderID}
+DELETE https://openapi.bitfront.me/v1/trade/orders/{orderID}
 ```
 
 ## Request parameters
 
 | Name | Description | Type | Loc. | Required |
 |--- |--- |--- |--- |--- |
-| `orderID` | The ID of the order to request to cancel. You can get the ID whenever you place an order or retrieve your order list. | Long | path | O |
+| `orderID` | The ID of the order to request to cancel. You can get the ID whenever you place an order or retrieve your order list. | Long | path | √ |
 
 ## Response
 
 | Name | Description | Type | Included |
 |--- |--- |--- |--- |
 | `timezone` |The time standard for the `responseTime`. It is always "UTC".|String|O|
-| `responseTime` |The time when responded. <br/>It is a timestamp in milliseconds since Unix Epoch in UTC. | Long | O |
+| `responseTime` |The time when responded. <br/>It is a timestamp in milliseconds since Unix Epoch in UTC. | Long | √ |
 | `statusCode` |The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).|Integer|O|
 | `statusMessage` |The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions).|String|O|
 | `responseData` |See the reference object.|[responseData](#responsedata)| |

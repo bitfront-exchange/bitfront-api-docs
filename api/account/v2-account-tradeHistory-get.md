@@ -7,19 +7,19 @@ You can set the conditions through the query parameters. See the parameter descr
 >
 > - The maximum period for the date condition is 30 days. In other words, the number of days from `startTime` to `endTime` MUST NOT exceed 30.
 > - The result records will be stored in `responseData` and sorted in descending order of `responseData[].createAt`.
-> - This API is allowed just 1 RPS regardless of the general rule on [RPS limit policy](/2_Authentication_and_Security_Policy.md#rps-limit-policy).
+> - This API is allowed for 1 time per second and 30 times per minute.
 
 ## Endpoint URI
 
 ```
-GET https://openapi.bitbox.me/v2/account/tradeHistory?coinPair={coinPair}&startTime={startTime}&endTime={endTime}&max={max}
+GET https://openapi.bitfront.me/v2/account/tradeHistory?coinPair={coinPair}&startTime={startTime}&endTime={endTime}&max={max}
 ```
 
 ## Request parameters
 
 | Name | Description | Type | Loc. | Required |
 |--- |--- |--- |--- |--- |
-| `coinPair` |The cryptocurrencies for the trades to retrieve. <br/>A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by '.'. <br/>For example, BCH.ETH means buying or selling BCH with ETH. <br/>If it is empty, this API will return all coin pair trades. | String | query | |
+| `coinPair` |The cryptocurrencies for the trades to retrieve. <br/>A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by '.'. <br/>For example, BCH.ETH means buying or selling BCH with ETH. | String | query | √ |
 | `startTime` |The start time of the period condition for retrieving trade records. It is a timestamp in milliseconds since Unix Epoch in UTC.|Integer|query|O|
 | `endTime` |The end time of the period condition for retrieving trade records. It is a timestamp in milliseconds since Unix Epoch in UTC. <br/>If unassigned, the default value of `startTime`+24hrs is used.|Integer|query| |
 | `max` |The maximum number of trades to retrieve. It should be in the range of 1-100. The default is 100. <br/>Note that the returned records can be less than `max` because the API returns only the trades that had been made in the given period.|Integer|query| |

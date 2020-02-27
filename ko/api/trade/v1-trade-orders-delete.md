@@ -4,14 +4,12 @@
 주문이 부분 체결되었으면 남은 부분만 취소하려고 시도합니다.
 
 > **Caution**
->
-> `statusCode`이 1000이라는 것은 취소 요청이 잘 전해졌다는 뜻이며 성공적으로 취소되었다는 뜻이 아닙니다. 주문이 취소되었는지 확인하려면 [`/v2/account/orders/{orderID}`](/api/account/v2-account-orders-orderID-get.md#order-information-v2)를 사용하십시오.
+> 
+> `statusCode`이 1000이라는 것은 취소 요청이 잘 전해졌다는 뜻이며 성공적으로 취소되었다는 뜻이 아닙니다. 주문이 취소되었는지 확인하려면 [`/v2/account/orders/{orderID}`](/ko/api/account/v2-account-orders-orderID-get.md#order-information-v2)를 사용하십시오.
 
 ## Endpoint URI
 
-```
-DELETE https://openapi.bitbox.me/v1/trade/orders/{orderID}
-```
+    DELETE https://openapi.bitfront.me/v1/trade/orders/{orderID}
 
 ## Request parameters
 
@@ -21,13 +19,13 @@ DELETE https://openapi.bitbox.me/v1/trade/orders/{orderID}
 
 ## Response
 
-| Name            | Description                                                          | Type                          | Included |
-| --------------- | -------------------------------------------------------------------- | ----------------------------- | -------- |
-| `timezone`      | `responseTime`의 기준 시간. 항상 “UTC”입니다.                                  | String                        | O        |
-| `responseTime`  | 응답 시간. 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다.                            | Long                          | O        |
-| `statusCode`    | 결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.   | Integer                       | O        |
-| `statusMessage` | 결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오. | String                        | O        |
-| `responseData`  | 대상 객체 설명을 참고하십시오.                                                    | [responseData](#responsedata) |          |
+| Name            | Description                                                             | Type                          | Included |
+| --------------- | ----------------------------------------------------------------------- | ----------------------------- | -------- |
+| `timezone`      | `responseTime`의 기준 시간. 항상 “UTC”입니다.                                     | String                        | O        |
+| `responseTime`  | 응답 시간. 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다.                               | Long                          | O        |
+| `statusCode`    | 결과 상태 코드. [`StatusCode` 정의](/ko/1_Overview.md#statuscode-정의)를 참고하십시오.   | Integer                       | O        |
+| `statusMessage` | 결과의 상세 메시지. [`StatusCode` 정의](/ko/1_Overview.md#statuscode-정의)를 참고하십시오. | String                        | O        |
+| `responseData`  | 대상 객체 설명을 참고하십시오.                                                       | [responseData](#responsedata) |          |
 
 ### responseData
 

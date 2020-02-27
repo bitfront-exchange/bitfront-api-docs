@@ -7,7 +7,7 @@
 
 암호화폐의 심벌(ticker symbol)을 대문자로 쓴 것.
 
-BITBOX는 각 암호화폐에 대해 공식적으로 혹은 널리 사용되는 심벌을 사용합니다. 가능한 coin code는 [Market coin pair policy](/api/market/v1-market-public-coins-pairPolicy-get.md#market-coin-pair-policy)에서 볼 수 있습니다.
+BITFRONT는 각 암호화폐에 대해 공식적으로 혹은 널리 사용되는 심벌을 사용합니다. 가능한 coin code는 [Market coin pair policy](/ko/api/market/v1-market-public-coins-pairPolicy-get.md#market-coin-pair-policy)에서 볼 수 있습니다.
 
 ## Coin pair
 
@@ -16,7 +16,7 @@ BITBOX는 각 암호화폐에 대해 공식적으로 혹은 널리 사용되는 
 예를 들어 “BCH.ETH”는 이더리움 기준에서 비트코인 캐시의 가치를 나타냅니다.
 
 암호화폐 거래 시에는 일반적으로 사선(/)을 구분 문자로 사용하나, 여기서는 점(.)을 사용하는 것에 유의하십시오.
-가능한 coin pair는 [Market coin pair policy](/api/market/v1-market-public-coins-pairPolicy-get.md#market-coin-pair-policy)에서 볼 수 있습니다.
+가능한 coin pair는 [Market coin pair policy](/ko/api/market/v1-market-public-coins-pairPolicy-get.md#market-coin-pair-policy)에서 볼 수 있습니다.
 
 ## Completed order
 

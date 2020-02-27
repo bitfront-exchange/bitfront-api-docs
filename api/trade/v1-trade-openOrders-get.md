@@ -10,7 +10,7 @@ Open orders will be listed as defined by the query parameter `max`. When the `ma
 ## Endpoint URI
 
 ```
-GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={currency}&max={max}
+GET https://openapi.bitfront.me/v1/trade/openOrders?market={market}&currency={currency}&max={max}
 ```
 
 ## Request parameters
@@ -25,10 +25,10 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
 
 | Name | Description | Type | Included |
 |--- |--- |--- |--- |
-| `timezone` | The time standard for the `responseTime`. It is always "UTC". | String | O |
+| `timezone` | The time standard for the `responseTime`. It is always "UTC". | String | √ |
 | `responseTime` | The time when responded. <br/>It is a timestamp in milliseconds since Unix Epoch in UTC.|Long|O|
-| `statusCode` | The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions). | Integer | O |
-| `statusMessage` | The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions). | String | O |
+| `statusCode` | The result status code. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions). | Integer | √ |
+| `statusMessage` | The detailed message of the result. See [`statusCode` definitions](/1_Overview.md#statuscode-definitions). | String | √ |
 | `responseData` | See the reference object. | [responseData](#responsedata)| |
 
 ### responseData

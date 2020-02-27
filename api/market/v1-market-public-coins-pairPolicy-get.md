@@ -1,15 +1,15 @@
 # Market coin pair policy
 
-Shows the latest data on BITBOX's coin pairs
+Shows the latest data on BITFRONT's coin pairs
 
 > **Note**
 >
-> Only `X-API-Key` in the header parameter is needed.
+> This API can be used without API KEY.
 
 ## Endpoint URI
 
 ```
-GET https://openapi.bitbox.me/v1/market/public/coins/pairPolicy
+GET https://openapi.bitfront.me/v1/market/public/coins/pairPolicy
 ```
 
 ## Request parameters
@@ -30,7 +30,7 @@ None
 
   - Type: array
 
-List of the latest data on BITBOX's coin pairs
+List of the latest data on BITFRONT's coin pairs
 
 Array of [pairList](#pairlist)
 

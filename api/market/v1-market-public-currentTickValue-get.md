@@ -5,19 +5,19 @@ The tick values include bid, ask, last prices, 24 hour volume, and others.
 
 > **Note**
 >
-> Only `X-API-Key` in the header parameter is needed.
+> This API can be used without API KEY.
 
 ## Endpoint URI
 
 ```
-GET https://openapi.bitbox.me/v1/market/public/currentTickValue?coinPair={coinPair}
+GET https://openapi.bitfront.me/v1/market/public/currentTickValue?coinPair={coinPair}
 ```
 
 ## Request parameters
 
 | Name | Description | Type | Loc. | Required |
 |--- |--- |--- |--- |--- |
-| `coinPair` |The target cryptocurrencies. <br/>A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by '.'. <br/>For example, BCH.ETH means buying or selling BCH with ETH. | String | query | O |
+| `coinPair` |The target cryptocurrencies. <br/>A case-sensitive string literal for the [Currency](/5_Terms.md#currency-for-coin-trading) and the [Market](/5_Terms.md#market-for-coin-trading) separated by '.'. <br/>For example, BCH.ETH means buying or selling BCH with ETH. | String | query | √ |
 
 ## Response
 

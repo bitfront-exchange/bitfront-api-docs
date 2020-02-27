@@ -1,35 +1,33 @@
 # Open orders
 
-지정한 [currency](/5_Terms.md#currency-for-coin-trading)와 [market](/5_Terms.md#market-for-coin-trading)의 열린 주문을 모두 조회합니다. <br/>
+지정한 [currency](/ko/5_Terms.md#currency-for-coin-trading)와 [market](/ko/5_Terms.md#market-for-coin-trading)의 열린 주문을 모두 조회합니다. <br/>
 파라미터 `max` 개수만큼 반환하며, `max`를 지정하지 않으면 최대 100개만 반환합니다. 조회된 주문은 주문 날짜 기준 내림차순으로 정렬됩니다.
 
 > **Note**
->
+> 
 > 필수로 표기된 파라미터는 없지만, `market`과 `currency` 파라미터 중 하나는 반드시 입력해야 합니다.
 
 ## Endpoint URI
 
-```
-GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={currency}&max={max}
-```
+    GET https://openapi.bitfront.me/v1/trade/openOrders?market={market}&currency={currency}&max={max}
 
 ## Request parameters
 
-| Name                       | Description                                                                                | Type    | Loc.  | Required |
-| -------------------------- | ------------------------------------------------------------------------------------------ | ------- | ----- | -------- |
-| `market`                   | 조회할 [Market](/5_Terms.md#market-for-coin-trading)의 [coin code](/5_Terms.md#coin-code). <br/>예를 들어 비트코인 캐시는 “BCH”가 됩니다. | String | query   |       |          |
-| `currency`                 | 조회할 [Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code). <br/>예를 들어 이더리움은 “ETH”가 됩니다.    | String | query   |       |          |
-| `max`                      | 조회할 열린 주문의 총 개수. 1에서 100까지 입력할 수 있습니다. 기본값은 100입니다. | Integer | query |          |
+| Name       | Description                                                                                                                   | Type    | Loc.  | Required |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------- | ------- | ----- | -------- |
+| `market`   | 조회할 [Market](/ko/5_Terms.md#market-for-coin-trading)의 [coin code](/ko/5_Terms.md#coin-code). <br/>예를 들어 비트코인 캐시는 “BCH”가 됩니다.  | String  | query |          |
+| `currency` | 조회할 [Currency](/ko/5_Terms.md#currency-for-coin-trading)의 [coin code](/ko/5_Terms.md#coin-code). <br/>예를 들어 이더리움은 “ETH”가 됩니다. | String  | query |          |
+| `max`      | 조회할 열린 주문의 총 개수. 1에서 100까지 입력할 수 있습니다. 기본값은 100입니다.                                                                           | Integer | query |          |
 
 ## Response
 
-| Name            | Description                                                          | Type                          | Included |
-| --------------- | -------------------------------------------------------------------- | ----------------------------- | -------- |
-| `timezone`      | `responseTime`의 기준 시간. 항상 “UTC”입니다.                                  | String                        | O        |
-| `responseTime`  | 응답 시간. 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다.                            | Long                          | O        |
-| `statusCode`    | 결과 상태 코드. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오.   | Integer                       | O        |
-| `statusMessage` | 결과의 상세 메시지. [`StatusCode` 정의](/1_Overview.md#statuscode-정의)를 참고하십시오. | String                        | O        |
-| `responseData`  | 대상 객체 설명을 참고하십시오.                                                    | [responseData](#responsedata) |          |
+| Name            | Description                                                             | Type                          | Included |
+| --------------- | ----------------------------------------------------------------------- | ----------------------------- | -------- |
+| `timezone`      | `responseTime`의 기준 시간. 항상 “UTC”입니다.                                     | String                        | O        |
+| `responseTime`  | 응답 시간. 밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다.                               | Long                          | O        |
+| `statusCode`    | 결과 상태 코드. [`StatusCode` 정의](/ko/1_Overview.md#statuscode-정의)를 참고하십시오.   | Integer                       | O        |
+| `statusMessage` | 결과의 상세 메시지. [`StatusCode` 정의](/ko/1_Overview.md#statuscode-정의)를 참고하십시오. | String                        | O        |
+| `responseData`  | 대상 객체 설명을 참고하십시오.                                                       | [responseData](#responsedata) |          |
 
 ### responseData
 
@@ -41,20 +39,20 @@ GET https://openapi.bitbox.me/v1/trade/openOrders?market={market}&currency={curr
 
   - Type: object
 
-| Name        | Description                                                                           | Type   | Included |
-| ----------- | ------------------------------------------------------------------------------------- | ------ | -------- |
-| `orderID`   | 주문의 ID                                                                                | Long   |          |
-| `market`    | [Market](/5_Terms.md#market-for-coin-trading)의 [coin code](/5_Terms.md#coin-code)     | String |          |
-| `currency`  | [Currency](/5_Terms.md#currency-for-coin-trading)의 [coin code](/5_Terms.md#coin-code) | String |          |
-| `orderType`| 주문 타입. 다음 중 하나입니다. <br/>- "MARKET": Market order <br/>- "LIMIT": Limit order <br/>- "STOPLIMIT": Stop-Limit order | String | |
-| `orderSide` | 주문 방향. 다음 중 하나입니다. <br/>- “BUY”: 사기 <br/>- “SELL”: 팔기 | String | |
-| `requestAmount` | 요청한 총수량 | Double | |
-| `remainAmount` | 요청한 수량 중 체결되지도 않고 취소되지도 않은 총수량 | Double | |
-| `price` | 제한 가격 | Double | |
-| `stopPrice` | 예약 실행 가격. `orderType`이 "STOPLIMIT"일 때만 나타납니다. | Double | |
-| `status` | 열린 주문의 상태. 다음 중 하나입니다. <br/>- “CREATE”: 주문이 생성됨 <br/>- “PENDING”: STOPLIMIT 주문이 예약되었고 아직 실행되지 않음 <br/>- “REQUEST”: 주문이 주문장에 요청됨 <br/>- “PROCESS”: 주문이 부분적으로 취소되거나 체결됨 <br/>- “COMPLETE”: 주문이 [완료](/5_Terms.md#completed-order)됨 (취소된 것도 포함). | String | |
-| `createAt` | 주문 생성 시각. <br/>밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다. | Long | |
-| `completedAt` | 주문이 [완료](/5_Terms.md#completed-order)된 시각. <br/>밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다. <br/>주문이 완료되지 않았다면 이 값은 0입니다. | Long | |
+| Name            | Description                                                                                                                                                                                                                                     | Type   | Included |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------- |
+| `orderID`       | 주문의 ID                                                                                                                                                                                                                                          | Long   |          |
+| `market`        | [Market](/ko/5_Terms.md#market-for-coin-trading)의 [coin code](/ko/5_Terms.md#coin-code)                                                                                                                                                         | String |          |
+| `currency`      | [Currency](/ko/5_Terms.md#currency-for-coin-trading)의 [coin code](/ko/5_Terms.md#coin-code)                                                                                                                                                     | String |          |
+| `orderType`     | 주문 타입. 다음 중 하나입니다. <br/>- “MARKET”: Market order <br/>- “LIMIT”: Limit order <br/>- “STOPLIMIT”: Stop-Limit order                                                                                                                               | String |          |
+| `orderSide`     | 주문 방향. 다음 중 하나입니다. <br/>- “BUY”: 사기 <br/>- “SELL”: 팔기                                                                                                                                                                                           | String |          |
+| `requestAmount` | 요청한 총수량                                                                                                                                                                                                                                         | Double |          |
+| `remainAmount`  | 요청한 수량 중 체결되지도 않고 취소되지도 않은 총수량                                                                                                                                                                                                                  | Double |          |
+| `price`         | 제한 가격                                                                                                                                                                                                                                           | Double |          |
+| `stopPrice`     | 예약 실행 가격. `orderType`이 “STOPLIMIT”일 때만 나타납니다.                                                                                                                                                                                                   | Double |          |
+| `status`        | 열린 주문의 상태. 다음 중 하나입니다. <br/>- “CREATE”: 주문이 생성됨 <br/>- “PENDING”: STOPLIMIT 주문이 예약되었고 아직 실행되지 않음 <br/>- “REQUEST”: 주문이 주문장에 요청됨 <br/>- “PROCESS”: 주문이 부분적으로 취소되거나 체결됨 <br/>- “COMPLETE”: 주문이 [완료](/ko/5_Terms.md#completed-order)됨 (취소된 것도 포함). | String |          |
+| `createAt`      | 주문 생성 시각. <br/>밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다.                                                                                                                                                                                               | Long   |          |
+| `completedAt`   | 주문이 [완료](/ko/5_Terms.md#completed-order)된 시각. <br/>밀리초 단위의 Unix Epoch (UTC) 타임스탬프입니다. <br/>주문이 완료되지 않았다면 이 값은 0입니다.                                                                                                                             | Long   |          |
 
 **A response example**
 

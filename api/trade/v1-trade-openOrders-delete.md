@@ -11,7 +11,7 @@ For each order, if the order is partially filled, it only tries to cancel the re
 ## Endpoint URI
 
 ```
-DELETE https://openapi.bitbox.me/v1/trade/openOrders/{coinPair}
+DELETE https://openapi.bitfront.me/v1/trade/openOrders/{coinPair}
 ```
 
 ## Request parameters

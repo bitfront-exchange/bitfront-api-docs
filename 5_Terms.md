@@ -7,7 +7,7 @@ To help you get a better understanding, we provide the list of important terms.
 
 A ticker symbol of a coin written in uppercase.
 
-BITBOX uses the commonly or officially used symbols of each cryptocurrency; all available coin codes are listed in [Market coin pair policy](/api/market/v1-market-public-coins-pairPolicy-get.md#market-coin-pair-policy).
+BITFRONT uses the commonly or officially used symbols of each cryptocurrency; all available coin codes are listed in [Market coin pair policy](/api/market/v1-market-public-coins-pairPolicy-get.md#market-coin-pair-policy).
 
 ## Coin pair
 

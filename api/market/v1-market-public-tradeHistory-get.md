@@ -1,18 +1,18 @@
 # Market trade history
 
-Retrieves the recent trade records under the given conditions in BITBOX. You can set the conditions through the query parameters. <br/>
+Retrieves the recent trade records under the given conditions in BITFRONT. You can set the conditions through the query parameters. <br/>
 See the parameter descriptions.
 
 > **Note**
 >
-> - Only `X-API-Key` in the header parameter is needed.
+> - This API can be used without API KEY.
 > - It only provides trade records over the last 3 months.
 > - The result records will be stored in `responseData` and sorted in descending order of `responseData[].createAt`.
 
 ## Endpoint URI
 
 ```
-GET https://openapi.bitbox.me/v1/market/public/tradeHistory?coinPair={coinPair}&startTime={startTime}&endTime={endTime}&max={max}
+GET https://openapi.bitfront.me/v1/market/public/tradeHistory?coinPair={coinPair}&startTime={startTime}&endTime={endTime}&max={max}
 ```
 
 ## Request parameters
@@ -38,7 +38,7 @@ GET https://openapi.bitbox.me/v1/market/public/tradeHistory?coinPair={coinPair}&
 
   - Type: array
 
-The recent trade records in BITBOX
+The recent trade records in BITFRONT
 
 Array of [history](#history)
 

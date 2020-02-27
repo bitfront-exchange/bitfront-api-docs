@@ -4,12 +4,12 @@ Retrieves records for the given coin pair from the order book.
 
 > **Note**
 >
-> Only `X-API-Key` in the header parameter is needed.
+> This API can be used without API KEY.
 
 ## Endpoint URI
 
 ```
-GET https://openapi.bitbox.me/v1/market/public/orderBooks?coinPair={coinPair}&depth={depth}
+GET https://openapi.bitfront.me/v1/market/public/orderBooks?coinPair={coinPair}&depth={depth}
 ```
 
 ## Request parameters

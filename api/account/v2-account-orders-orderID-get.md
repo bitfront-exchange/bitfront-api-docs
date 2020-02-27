@@ -17,14 +17,14 @@ You can check whether the order has been cancelled by using the following formul
 ## Endpoint URI
 
 ```
-GET https://openapi.bitbox.me/v2/account/orders/{orderID}
+GET https://openapi.bitfront.me/v2/account/orders/{orderID}
 ```
 
 ## Request parameters
 
 | Name | Description | Type | Loc. | Required |
 |--- |--- |--- |--- |--- |
-| `orderID` | The ID of the order to get. You can get the ID whenever you place an order or retrieve your order list. | Long | path | O |
+| `orderID` | The ID of the order to get. You can get the ID whenever you place an order or retrieve your order list. | Long | path | √ |
 
 ## Response
 
@@ -57,7 +57,7 @@ GET https://openapi.bitbox.me/v2/account/orders/{orderID}
 | `reserveRemainingValue` |The reserved value for the remaining amount of the order. <br/>For example, in "XRP" Currency and "BTC" Market, <br/>- When `orderSide` is "BUY", `reserveRemainingValue` in BTC is `remainAmount` * `price` * (1 + _fee rate_). <br/>- When `orderSide` is "SELL", `reserveRemainingValue` in XRP is `remainAmount`.|Double| |
 | `makerFeeRate` |Fee rate for a [Maker](/5_Terms.md#maker) order. <br/>Fee rate is not an absolute value. i. e. If the value is 0.001, this indicates that the fee rate is 0.1%. | Double | |
 | `takerFeeRate` |Fee rate for a [Taker](/5_Terms.md#taker) order. <br/>Fee rate is not an absolute value. i. e. If the value is 0.001, this indicates that the fee rate is 0.1%. | Double | |
-| `enableLnFee` |Whether to pay the fee with LN. <br/>Refer to the [Transaction fees](https://www.bitbox.me/fees/) for further information on how to pay the transaction fee with LN. | Boolean | |
+| `enableLnFee` |Whether to pay the fee with LN. <br/>Refer to the [Transaction fees](https://www.bitfront.me/fees/) for further information on how to pay the transaction fee with LN. | Boolean | |
 | `makerLnFeeRate` |Fee rate for a [Maker](/5_Terms.md#maker) order when paying fees with LN. <br/>If `enableLnFee` is set as false, this value is '0'. | Double | |
 | `takerLnFeeRate` |Fee rate for a [Taker](/5_Terms.md#taker) order when paying fees with LN. <br/>If `enableLnFee` is set as false, this value is '0'.|Double| |
 | `status` |The status of the order. It is one of the following: <br/>- "CREATE": The order is created. <br/>- “PENDING”: A Stop-Limit order is created, but not executed yet. <br/>- "REQUEST": The order is registered to the order book. <br/>- "PROCESS": The order is partially cancelled or filled. <br/>- "COMPLETE": The order is [completed](/5_Terms.md#completed-order) (including cancellation).|String| |

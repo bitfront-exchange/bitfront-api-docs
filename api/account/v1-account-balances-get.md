@@ -5,7 +5,7 @@ Gets your account balance.
 ## Endpoint URI
 
 ```
-GET https://openapi.bitbox.me/v1/account/balances
+GET https://openapi.bitfront.me/v1/account/balances
 ```
 
 ## Request parameters
