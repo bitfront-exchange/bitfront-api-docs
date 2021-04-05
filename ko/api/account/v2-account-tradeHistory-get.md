@@ -7,7 +7,7 @@
 > 
 >   - 조회 기간은 최대 30일로 제한됩니다. 즉, `startTime`에서 `endTime`까지의 날짜가 30일을 초과할 수 없습니다.
 >   - 결과 내역은 `responseData`에 저장되며 `responseData[].createAt` 기준 내림차순으로 정렬됩니다.
->   - 이 API는 1초당 1회, 1분당 30회만 허용합니다.
+>   - 이 API 호출 횟수는 1초당 1회, 1분당 30회만 허용합니다.
 
 ## Endpoint URI
 

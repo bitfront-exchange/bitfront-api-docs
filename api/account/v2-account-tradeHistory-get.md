@@ -7,7 +7,7 @@ You can set the conditions through the query parameters. See the parameter descr
 >
 > - The maximum period for the date condition is 30 days. In other words, the number of days from `startTime` to `endTime` MUST NOT exceed 30.
 > - The result records will be stored in `responseData` and sorted in descending order of `responseData[].createAt`.
-> - This API is allowed for 1 time per second and 30 times per minute.
+> - The number of this API call is allowed for 1 time per second and 30 times per minute.
 
 ## Endpoint URI
 

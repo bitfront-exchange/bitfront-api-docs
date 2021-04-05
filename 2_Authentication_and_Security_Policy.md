@@ -31,8 +31,8 @@ Requests are deemed as unsafe and rejected under the following conditions:
 
 The number of requests per API KEY is limited as follows:
 
-  - Each API KEY for all requests is allowed for 3 times per second and 30 times per minute. (Unless agreed otherwise)
-      - Exception) `/v2/account/tradeHistory` API is allowed 1 time per second and 30 times per minute.
+  - Total number of API calls is allowed for 3 times per second and 60 times per minute. (Unless agreed otherwise)
+      - Exception) The number of `/v2/account/tradeHistory` API call is allowed 1 time per second and 30 times per minute.
   - For orders or order cancellations, the recommended interval between requests is at least 10ms. Any interval shorter than the recommendation can result in failure.
   - Any requests exceeding the RPS limit are rejected.
 
