@@ -94,14 +94,14 @@ LINUX에서 `echo`와 `openssl`을 사용해 HMAC SHA256 서명을 생성합니�
 ``` bash
 echo -n "123451523864107010GET/v1/trade/openOrdersmarket=ETH&currency=BTC&max=100" \
   | openssl dgst -sha256 -hmac "dwjnGqCVzfHlW6Q9r4BjXpmiK1WCdMBI"
-  (stdin)= 4e211ada0a332cb8611560c2109eed51618ea4aed3976eb973e9edae12d433e4
+  (stdin)= f6f55e74ebe513b5c5b26a1c056923ce7a8dd56c0ea890d22fa603688b28ace0
 ```
 
 `curl`을 이용해 생성한 서명을 API 요청 헤더에 전달합니다.
 
 ``` bash
 curl --header "X-API-KEY: 6W206egN32nCQ0VB" \
-     --header "X-API-SIGN: 4e211ada0a332cb8611560c2109eed51618ea4aed3976eb973e9edae12d433e4" \
+     --header "X-API-SIGN: f6f55e74ebe513b5c5b26a1c056923ce7a8dd56c0ea890d22fa603688b28ace0" \
      --header "X-API-TIMESTAMP: 1523864107010" \
      --header "X-API-NONCE: 12345" \
      --header 'content-type: application/x-www-form-urlencoded' \
@@ -117,7 +117,7 @@ curl --header "X-API-KEY: 6W206egN32nCQ0VB" \
 | -------- | ---------------------------------------------------- |
 | HTTP 메서드 | POST                                                 |
 | 요청 경로    | `/v1/trade/marketOrders`                             |
-| 파라미터     | `quantity`: 1, `coinPair`: ETH.BTC, `orderSide`: BUY |
+| 파라미터     | `quantity`: 1, `coinPair`: BCH.ETH, `orderSide`: BUY |
 
 서명에 필요한 문자열은 다음처럼 만들 수 있습니다.
 

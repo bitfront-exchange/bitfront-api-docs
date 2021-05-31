@@ -96,14 +96,14 @@ In LINUX, generate the HMAC-SHA256 signature by using the `echo` and `openssl` c
 ``` bash
 echo -n "123451523864107010GET/v1/trade/openOrdersmarket=ETH&currency=BTC&max=100" \
   | openssl dgst -sha256 -hmac "dwjnGqCVzfHlW6Q9r4BjXpmiK1WCdMBI"
-(stdin)= 4e211ada0a332cb8611560c2109eed51618ea4aed3976eb973e9edae12d433e4
+(stdin)= f6f55e74ebe513b5c5b26a1c056923ce7a8dd56c0ea890d22fa603688b28ace0
 ```
 
 Next, send an API request including the signature by using the `curl` command.
 
 ``` bash
 curl --header "X-API-KEY: 6W206egN32nCQ0VB" \
-     --header "X-API-SIGN: 4e211ada0a332cb8611560c2109eed51618ea4aed3976eb973e9edae12d433e4" \
+     --header "X-API-SIGN: f6f55e74ebe513b5c5b26a1c056923ce7a8dd56c0ea890d22fa603688b28ace0" \
      --header "X-API-TIMESTAMP: 1523864107010" \
      --header "X-API-NONCE: 12345" \
      --header 'content-type: application/x-www-form-urlencoded' \
@@ -119,7 +119,7 @@ The API for the example is as follows:
 | :----------- | :--------------------------------------------------- |
 | HTTP Method  | POST                                                 |
 | Request path | `/v1/trade/marketOrders`                             |
-| Parameters   | `quantity`: 1, `coinPair`: ETH.BTC, `orderSide`: BUY |
+| Parameters   | `quantity`: 1, `coinPair`: BCH.ETH, `orderSide`: BUY |
 
 The target string for the signature is as follows:
 
